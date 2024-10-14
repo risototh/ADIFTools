@@ -1,0 +1,15 @@
+ADIF Export from RumLogNG by DL2RUM
+For further info visit: https://www.dl2rum.de
+
+<ADIF_VER:5>3.1.4
+<CREATED_TIMESTAMP:15>20240508 205251
+<PROGRAMID:8>RUMlogNG
+<PROGRAMVERSION:6>5.15.5
+<EOH>
+
+
+<call:5>OM6ZB <qso_date_off:8>20240508 <qso_date:8>20240508 <time_on:6>144300 <time_off:6>144300 <band:2>2m <freq:10>144.525000 <mode:2>FM <rst_sent:2>59 <rst_rcvd:2>55 <app_rumlog_qsl:1>X <qsl_rcvd:1>Y <qsl_sent:1>Y <dxcc:3>504 <cqz:2>15 <ituz:2>28 <cont:2>EU <name:6>Cvrček <qth:7>Budatín <gridsquare:6>JN99IF <app_rumlog_power:3>QRP <eqsl_qsl_rcvd:1>Y <eqsl_qsl_sent:1>Y <lotw_qsl_rcvd:1>Y <lotw_qsl_sent:1>Y <pfx:3>OM6 <clublog_qso_upload_status:1>M <app_rumlog_colorcode:1>0 <eor>
+<call:6>OM3ROM <qso_date_off:8>20240508 <qso_date:8>20240508 <time_on:6>142300 <time_off:6>142300 <band:2>2m <freq:10>144.525000 <mode:2>FM <rst_sent:2>59 <rst_rcvd:2>59 <app_rumlog_qsl:1>X <qsl_rcvd:1>Y <qsl_sent:1>Y <dxcc:3>504 <cqz:2>15 <ituz:2>28 <cont:2>EU <qth:6>Zilina <gridsquare:6>JN99JF <app_rumlog_power:3>QRP <eqsl_qsl_rcvd:1>Y <eqsl_qsl_sent:1>Y <lotw_qsl_rcvd:1>Y <lotw_qsl_sent:1>Y <pfx:3>OM3 <clublog_qso_upload_status:1>M <app_rumlog_colorcode:1>0 <eor>
+<call:5>OM4WY <qso_date_off:8>20240508 <qso_date:8>20240508 <time_on:6>140500 <time_off:6>140500 <band:2>2m <freq:10>144.525000 <mode:2>FM <rst_sent:2>59 <rst_rcvd:2>59 <app_rumlog_qsl:1>X <qsl_rcvd:1>Y <qsl_sent:1>Y <dxcc:3>504 <cqz:2>15 <ituz:2>28 <cont:2>EU <name:13>Roman Rakovan <qth:6>Zilina <gridsquare:6>JN99JF <app_rumlog_power:3>QRP <eqsl_qsl_rcvd:1>Y <eqsl_qsl_sent:1>Y <lotw_qsl_rcvd:1>Y <lotw_qsl_sent:1>Y <pfx:3>OM4 <clublog_qso_upload_status:1>M <app_rumlog_colorcode:1>0 <eor>
+<call:5>OM6WW <qso_date_off:8>20240508 <qso_date:8>20240508 <time_on:6>135900 <time_off:6>135900 <band:2>2m <freq:10>144.525000 <mode:2>FM <rst_sent:2>59 <rst_rcvd:2>54 <app_rumlog_qsl:1>X <qsl_rcvd:1>Y <qsl_sent:1>Y <dxcc:3>504 <cqz:2>15 <ituz:2>28 <cont:2>EU <gridsquare:6>JN99GJ <app_rumlog_power:3>QRP <eqsl_qsl_rcvd:1>Y <eqsl_qsl_sent:1>Y <lotw_qsl_rcvd:1>Y <lotw_qsl_sent:1>Y <pfx:3>OM6 <clublog_qso_upload_status:1>M <app_rumlog_colorcode:1>0 <eor>
+<call:6>SP9MKM <qso_date_off:8>20240508 <qso_date:8>20240508 <time_on:6>135500 <time_off:6>135500 <band:2>2m <freq:10>144.525000 <mode:2>FM <rst_sent:2>44 <rst_rcvd:2>53 <app_rumlog_qsl:1>X <qsl_rcvd:1>Y <qsl_sent:1>Y <dxcc:3>269 <cqz:2>15 <ituz:2>28 <cont:2>EU <name:5>Bohus <qth:16>Wodzislaw Slaski <gridsquare:6>JN90FA <app_rumlog_power:3>QRP <eqsl_qsl_rcvd:1>Y <eqsl_qsl_sent:1>Y <lotw_qsl_rcvd:1>Y <lotw_qsl_sent:1>Y <pfx:3>SP9 <clublog_qso_upload_status:1>M <app_rumlog_colorcode:1>0 <eor>

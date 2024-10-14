@@ -1,0 +1,816 @@
+QRZLogbook download for ok8rt
+    Date: Mon Jul  8 09:42:25 2024
+    Bookid: 398654
+    Records: 19
+    <ADIF_VER:5>3.1.1
+    <PROGRAMID:10>QRZLogbook
+    <PROGRAMVERSION:3>2.0
+    <eoh>
+<app_qrzlog_logid:10>1121019940
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OM3TZZ
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>15
+<distance:2>56
+<dxcc:3>504
+<email:26>jaroslav.jamrich@gmail.com
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.367
+<freq_rx:7>144.367
+<gridsquare:6>JN88ng
+<lat:11>N048 16.248
+<lon:11>E017 07.500
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:16>Jaroslav Jamrich
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:6>Trnava
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:1>5
+<station_callsign:5>OM6RT
+<stx:1>1
+<time_off:4>1404
+<time_on:4>1404
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121020346
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:4>OM8A
+<cont:2>EU
+<country:15>Slovak Republic
+<distance:2>42
+<dxcc:3>504
+<email:18>om3rm@om-power.com
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.274
+<freq_rx:7>144.274
+<gridsquare:6>JN87wv
+<lat:11>N047 53.750
+<lon:11>E017 52.500
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:13>TIBOR FERENEC
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:5>OM2VL
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:7>BAC 126
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:1>8
+<station_callsign:5>OM6RT
+<stx:1>2
+<time_off:4>1406
+<time_on:4>1406
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121020620
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:5>OM5AW
+<cont:2>EU
+<country:15>Slovak Republic
+<distance:2>13
+<dxcc:3>504
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.321
+<freq_rx:7>144.321
+<gridsquare:6>JN98ah
+<lat:11>N048 18.750
+<lon:11>E018 02.520
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:14>Jozef Cizmarik
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:5>OM2FY
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:1>9
+<station_callsign:5>OM6RT
+<stx:1>3
+<time_off:4>1407
+<time_on:4>1407
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121023943
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:5>OM1PF
+<cont:2>EU
+<country:15>Slovak Republic
+<distance:2>65
+<dxcc:3>504
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.321
+<freq_rx:7>144.321
+<gridsquare:6>JN88st
+<lat:11>N048 48.750
+<lon:11>E017 32.520
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:12>Peter Forgac
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:14>Dunajska Luzna
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>11
+<station_callsign:5>OM6RT
+<stx:1>4
+<time_off:4>1415
+<time_on:4>1415
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121024825
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OM4AGW
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>15
+<distance:2>57
+<dxcc:3>504
+<email:16>om4agw@gmail.com
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:6>144.19
+<freq_rx:6>144.19
+<gridsquare:6>JN98as
+<ituz:2>28
+<lat:11>N048 46.248
+<lon:11>E018 02.520
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:15>Ladislav Bakita
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:14>PartizÃ¡nske
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>27
+<station_callsign:5>OM6RT
+<stx:1>5
+<time_off:4>1418
+<time_on:4>1418
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121029839
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:4>OM2Y
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>15
+<distance:2>64
+<dxcc:3>504
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.168
+<freq_rx:7>144.168
+<gridsquare:6>JN88RS
+<ituz:2>28
+<lat:11>N048 46.248
+<lon:11>E017 27.480
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:20>Contest Call - OM2IB
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:16>via bureau OM2IB
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:7>Pezinok
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>45
+<station_callsign:5>OM6RT
+<stx:1>6
+<time_off:4>1422
+<time_on:4>1422
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121035411
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:4>HA2R
+<cont:2>EU
+<country:7>Hungary
+<distance:3>121
+<dxcc:3>239
+<email:18>ha2ero@freemail.hu
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.251
+<freq_rx:7>144.251
+<gridsquare:6>JN87ue
+<lat:11>N047 11.250
+<lon:11>E017 42.500
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:18> Bakony Radio Club
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:6>HA2ERO
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:8>Veszprem
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>42
+<station_callsign:5>OM6RT
+<stx:1>7
+<time_off:4>1430
+<time_on:4>1430
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121036211
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OM3KII
+<cont:2>EU
+<country:15>Slovak Republic
+<distance:2>67
+<dxcc:3>504
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.267
+<freq_rx:7>144.267
+<gridsquare:6>JN88uu
+<lat:11>N048 51.456
+<lon:11>E017 40.493
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:23>OM3Kii Radioclub Junior
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:38>VIA OM2FY . 100% ANSWERING BURO/DIRECT
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:8>Slovakia
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>62
+<station_callsign:5>OM6RT
+<stx:1>8
+<time_off:4>1435
+<time_on:4>1435
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121037255
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:4>OE1W
+<cont:2>EU
+<country:7>Austria
+<cqz:2>15
+<distance:3>171
+<dxcc:3>206
+<email:13>oe1w@oevsv.at
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.312
+<freq_rx:7>144.312
+<gridsquare:6>JN77tx
+<ituz:2>28
+<lat:11>N047 58.320
+<lon:11>E015 36.641
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:41>Contest Group From The Radio Club Austria
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:16>VIA OEVSV BUREAU
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:6>Vienna
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>79
+<station_callsign:5>OM6RT
+<stx:1>9
+<time_off:4>1440
+<time_on:4>1440
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121038244
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OM3RBS
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>15
+<distance:2>75
+<dxcc:3>504
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.383
+<freq_rx:7>144.383
+<gridsquare:6>jn98kj
+<ituz:2>28
+<lat:11>N048 23.748
+<lon:11>E018 52.500
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>14
+<station_callsign:5>OM6RT
+<stx:2>10
+<time_off:4>1442
+<time_on:4>1442
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121039290
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OM3KTR
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>15
+<distance:2>24
+<dxcc:3>504
+<email:17>om3ktr@omradio.sk
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.246
+<freq_rx:7>144.246
+<gridsquare:6>JN88vl
+<ituz:2>28
+<lat:11>N048 28.752
+<lon:11>E017 47.520
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:26> Trnava Amateur Radio Club
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:53>S.A.R.A, P.O. BOX 14, 900 31 STUPAVA, SLOVAK REPUBLIC
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:13>917 01 TRNAVA
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>32
+<station_callsign:5>OM6RT
+<stx:2>11
+<time_off:4>1446
+<time_on:4>1446
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121039909
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:4>HG6Z
+<cont:2>EU
+<country:7>Hungary
+<cqz:2>28
+<distance:3>154
+<dxcc:3>239
+<email:16>ha6kvc@gmail.com
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.246
+<freq_rx:7>144.246
+<gridsquare:6>JN97wv
+<ituz:2>15
+<lat:11>N047 54.661
+<lon:11>E019 52.949
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:33>Radioklub - Vak Bottyan Radioklub
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:15>BUREAU AND EQSL
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:8>GYONGYOS
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>39
+<station_callsign:5>OM6RT
+<stx:2>12
+<time_off:4>1452
+<time_on:4>1452
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121051208
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OK2KRT
+<cont:2>EU
+<country:14>Czech Republic
+<cqz:2>15
+<distance:3>137
+<dxcc:3>503
+<email:15>ok2kw@ebarta.cz
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.215
+<freq_rx:7>144.215
+<gridsquare:6>JN99cl
+<ituz:2>28
+<lat:11>N049 28.752
+<lon:11>E018 12.480
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:10>Radio Club
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:28>OK2UYU, via bureau or direct
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:17>Valasska Bystrice
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:2>92
+<station_callsign:5>OM6RT
+<stx:2>15
+<time_off:4>1532
+<time_on:4>1532
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121055373
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:5>OM6NM
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>15
+<distance:3>115
+<dxcc:3>504
+<email:19>Info@lekarznalec.sk
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.152
+<freq_rx:7>144.152
+<gridsquare:6>JN99jc
+<ituz:2>28
+<lat:11>N049 06.252
+<lon:11>E018 47.520
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:18>Norbert Moravansky
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:5>OM2FY
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:10>Bratislava
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:3>144
+<station_callsign:5>OM6RT
+<stx:2>16
+<time_off:4>1541
+<time_on:4>1541
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121264554
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>SP9FYS
+<cont:2>EU
+<country:6>Poland
+<distance:3>148
+<dxcc:3>269
+<email:11>rysta@o2.pl
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.371
+<freq_rx:7>144.371
+<gridsquare:6>JN99lj
+<lat:11>N049 23.748
+<lon:11>E018 57.480
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:19>Ryszard A. Stachura
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:15>Bielsko-Biala .
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:3>121
+<state:2>PL
+<station_callsign:5>OM6RT
+<stx:2>17
+<time_off:4>2218
+<time_on:4>2218
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121265306
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:6>OM3KOM
+<cont:2>EU
+<country:15>Slovak Republic
+<cqz:2>28
+<distance:2>76
+<dxcc:3>504
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.191
+<freq_rx:7>144.191
+<gridsquare:6>JN98dv
+<ituz:2>15
+<lat:11>N048 53.700
+<lon:11>E018 17.400
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:30>Radioklub Dubnica nad VÃ¡hom
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qsl_via:6>bureau
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:20>Dubnica nad VÃ¡hom
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:3>157
+<state:2>SK
+<station_callsign:5>OM6RT
+<stx:2>18
+<time_off:4>2224
+<time_on:4>2224
+<tx_pwr:2>50
+<eor>
+
+<app_qrzlog_logid:10>1121265988
+<app_qrzlog_status:1>N
+<band:2>2m
+<band_rx:2>2m
+<call:4>S54K
+<cont:2>EU
+<country:8>Slovenia
+<cqz:2>15
+<distance:3>296
+<dxcc:3>499
+<email:16>s59ehi@gmail.com
+<eqsl_qsl_rcvd:1>N
+<eqsl_qsl_sent:1>N
+<freq:7>144.199
+<freq_rx:7>144.199
+<gridsquare:6>JN76ll
+<ituz:2>28
+<lat:11>N046 28.752
+<lon:11>E014 57.480
+<lotw_qsl_rcvd:1>N
+<lotw_qsl_sent:1>N
+<mode:3>SSB
+<my_city:7>Žilina
+<my_country:15>Slovak Republic
+<my_cq_zone:2>15
+<my_gridsquare:6>JN88wg
+<my_itu_zone:2>28
+<my_lat:11>N048 16.248
+<my_lon:11>E017 52.500
+<my_name:13>Richard Tóth
+<name:23>RADIOCLUB Franjo Malgaj
+<qrzcom_qso_upload_date:8>20240706
+<qrzcom_qso_upload_status:1>Y
+<qsl_rcvd:1>N
+<qsl_sent:1>N
+<qso_date:8>20240706
+<qso_date_off:8>20240706
+<qth:25>SI-2390 Ravne na Koroskem
+<rst_rcvd:2>59
+<rst_sent:2>59
+<srx:3>290
+<state:2>SI
+<station_callsign:5>OM6RT
+<stx:2>19
+<time_off:4>2229
+<time_on:4>2229
+<tx_pwr:2>50
+<eor>
+
