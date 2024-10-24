@@ -120,12 +120,12 @@ class HamUtils {
             $date = substr($record['qso_date']['value'], 6, 2) . '/' . substr($record['qso_date']['value'], 4, 2) . '/' . substr($record['qso_date']['value'], 2, 2);
 
             $mySummit = '';
-            if (preg_match('~my sota:\s?([a-z]{2}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
+            if (preg_match('~my sota:\s?([a-z]{1,2}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
                 $mySummit = $matches[1];
             }
 
             $hisSummit = '';
-            if (preg_match('~s2s:\s?([a-z]{2}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
+            if (preg_match('~s2s:\s?([a-z]{1,2}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
                 $hisSummit = $matches[1];
             }
 
