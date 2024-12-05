@@ -56,6 +56,7 @@ class ADIFParser {
     private static function fixQSO(array &$QSO) : void {
         if (array_key_exists('name', $QSO)) {
             $QSO['name']['value'] = self::fixUTF((string)$QSO['name']['value']);
+            $QSO['name']['value'] = iconv('ISO-8859-1', 'ASCII//TRANSLIT//IGNORE', $QSO['name']['value']);
         }
     }
 

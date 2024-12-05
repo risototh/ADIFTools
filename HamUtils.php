@@ -93,6 +93,8 @@ class HamUtils {
 
     public static function EDIMode(string $mode) : int {
         switch (strtoupper($mode)) {
+            case 'USB' :
+            case 'LSB' :
             case 'SSB' : return 1;
             case 'AM' : return 5;
             case 'FM' : return 6;
@@ -103,7 +105,9 @@ class HamUtils {
         }
     }
     public static function exportSOTA(ADIFParser $adif, $config) : string {
-        $result = '';
+//        $result = '';
+
+        $csv = fopen('php://memory', 'r+');
 
         foreach ($adif->getQSOs() as $record)
         {
@@ -120,26 +124,30 @@ class HamUtils {
             $date = substr($record['qso_date']['value'], 6, 2) . '/' . substr($record['qso_date']['value'], 4, 2) . '/' . substr($record['qso_date']['value'], 2, 2);
 
             $mySummit = '';
-            if (preg_match('~my sota:\s?([a-z]{1,2}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
+            if (preg_match('~my sota:\s?([a-z0-9]{1,3}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
                 $mySummit = $matches[1];
             }
 
             $hisSummit = '';
-            if (preg_match('~s2s:\s?([a-z]{1,2}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
+            if (preg_match('~s2s:\s?([a-z0-9]{1,3}/[a-z]{2}-\d{3})~i', (string)$record['comment']['value'], $matches)) {
                 $hisSummit = $matches[1];
             }
 
-            $record['gridsquare']['value'] = strtoupper($record['gridsquare']['value']);
+            $record['gridsquare']['value'] = strtoupper($record['gridsquare']['value'] ?? '');
             $note = "{$record['gridsquare']['value']} rp{$record['rst_rcvd']['value']} rs{$record['rst_sent']['value']} ";
             if (isset($record['name']['value'])) {
                 $note .= "OP:{$record['name']['value']}";
             }
 
-            $result .= "V2,OM6RT,{$mySummit},{$date},{$time},{$record['freq_rx']['value']},{$record['mode']['value']},{$record['call']['value']},{$hisSummit},{$note}\n";
+//            $result .= "V2,OM6RT,{$mySummit},{$date},{$time},{$record['freq_rx']['value']},{$record['mode']['value']},{$record['call']['value']},{$hisSummit},{$note}\n";
+            fputcsv($csv, ['V2', 'OM6RT', $mySummit, $date, $time, $record['freq_rx']['value'], $record['mode']['value'], $record['call']['value'], $hisSummit, $note]);
             //if (isset($record['sota_ref']['value'])) echo " SOTA:{$record['sota_ref']['value']}";
         }
 
-        return $result;
+        rewind($csv);
+        return stream_get_contents($csv);
+
+//        return $result;
     }
 
     public static function exportCBPRM(ADIFParser $adif, $config) : string {
