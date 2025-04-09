@@ -134,13 +134,13 @@ class HamUtils {
             }
 
             $record['gridsquare']['value'] = strtoupper($record['gridsquare']['value'] ?? '');
-            $note = "{$record['gridsquare']['value']} rp{$record['rst_rcvd']['value']} rs{$record['rst_sent']['value']} ";
+            $note = "{$record['gridsquare']['value']} rr{$record['rst_rcvd']['value']} rs{$record['rst_sent']['value']} ";
             if (isset($record['name']['value'])) {
                 $note .= "OP:{$record['name']['value']}";
             }
 
 //            $result .= "V2,OM6RT,{$mySummit},{$date},{$time},{$record['freq_rx']['value']},{$record['mode']['value']},{$record['call']['value']},{$hisSummit},{$note}\n";
-            fputcsv($csv, ['V2', 'OM6RT', $mySummit, $date, $time, $record['freq_rx']['value'], $record['mode']['value'], $record['call']['value'], $hisSummit, $note]);
+            fputcsv($csv, ['V2', 'OM6RT/P', $mySummit, $date, $time, $record['freq_rx']['value'], $record['mode']['value'], $record['call']['value'], $hisSummit, $note]);
             //if (isset($record['sota_ref']['value'])) echo " SOTA:{$record['sota_ref']['value']}";
         }
 
@@ -165,7 +165,7 @@ class HamUtils {
 
             // print_r($record);
             $result .= "{$record['time_on']['value']} ";
-            $result .= "{$record['call']['value']} {$record['gridsquare']['value']};rp{$record['rst_rcvd']['value']} rs{$record['rst_sent']['value']} {$record['band']['value']}-{$record['mode']['value']}";
+            $result .= "{$record['call']['value']} {$record['gridsquare']['value']};rp{$record['rst_rcvd']['value']} rv{$record['rst_sent']['value']} {$record['band']['value']}-{$record['mode']['value']}";
             if (isset($record['name']['value'])) $result .= " OP:{$record['name']['value']}";
             if (isset($record['sota_ref']['value'])) $result .= " SOTA:{$record['sota_ref']['value']}";
             $result .= "\n";
@@ -190,7 +190,7 @@ class HamUtils {
             // print_r($record);
             $j = sprintf('%03d', $i + 1);
             $result .= "{$record['time_on']['value']} ";
-            $result .= "{$record['call']['value']} {$record['gridsquare']['value']};rp{$record['rst_rcvd']['value']} rs{$record['rst_sent']['value']} {$record['band']['value']}-{$record['mode']['value']}";
+            $result .= "{$record['call']['value']} {$record['gridsquare']['value']};rr{$record['rst_rcvd']['value']} rs{$record['rst_sent']['value']} {$record['band']['value']}-{$record['mode']['value']}";
             if (isset($record['name']['value'])) $result .= " #{$j}/#{$record['name']['value']}";
             if (isset($record['sota_ref']['value'])) $result .= " SOTA:{$record['sota_ref']['value']}";
             $result .= "\n";
