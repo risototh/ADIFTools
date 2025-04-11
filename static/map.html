@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>OM6RT ADIF Mapper</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -8,6 +9,8 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="html2canvas.min.js"></script>
 
     <!-- main -->
     <script>
@@ -6544,6 +6547,27 @@
             file.click();
         }
 
+        function downloadData(dataUrl, fileName) {
+            let element = document.createElement('a');
+            element.setAttribute('href', dataUrl);
+            element.setAttribute('download', fileName);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        function saveScreenshot() {
+            // not yet implemented
+            html2canvas(document.body, {
+                useCORS: true,
+            }).then(function (canvas) {
+                let dataUrl = canvas.toDataURL();
+                console.log(dataUrl);
+                downloadData(dataUrl, 'ADIFMapper.png');
+            });
+        }
+
         function loadAndProcess() {
             let fileReader = new FileReader();
             fileReader.onload = () => {
@@ -6565,13 +6589,13 @@
 
                 let country = decoder.decode(record.call.value, date);
 
-                let lat = record.lat.value || '';
-                let lon = record.lon.value || '';
+                let lat = 0, lon = 0;
+                if (record.lat && record.lat.value && record.lon && record.lon.value) {
+                    [lat, lon] = latlon2float(record.lat.value, record.lon.value);
+                }
                 if (!lat && !lon && record.gridsquare && record.gridsquare.value) {
                     [lat, lon] = grid2latlon(record.gridsquare.value);
                 }
-
-                [lat, lon] = latlon2float(lat, lon);
 
                 QSOs.push({
                     call: record.call.value,
@@ -6591,6 +6615,7 @@
 
         function mapQSOs(QSOs) {
             let points = [];
+            // home qth point
             let home = grid2latlon(document.getElementById('locator').value);
             if (home != [0,0]) {
                 L.marker(home, {}).addTo(map);
@@ -6600,17 +6625,15 @@
             markers.clearLayers();
             QSOs.forEach((qso) => {
                 if (qso.lat && qso.lon) {
-                    // let marker = L.marker([qso.lat, qso.lon]).addTo(map);
                     let marker = L.marker([qso.lat, qso.lon]);
                     markers.addLayer(marker);
                     points.push([qso.lat, qso.lon]);
 
+                    // line from home qth to remote qth
                     if (home != [0,0]) {
-                        // let polyline = L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1}).addTo(map);
                         let polyline = L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1});
                         markers.addLayer(polyline);
                     }
-
                 }
             });
 
@@ -6704,7 +6727,13 @@
 
             clearTable();
             let counter = 1;
-            stats = Object.values(stats).sort((a, b) => a.name.localeCompare(b.name));
+            stats = Object.values(stats).sort((a, b) => {
+                let diff = b.qso - a.qso;
+                if (diff === 0) {
+                    return a.name.localeCompare(b.name);
+                }
+                return diff;
+            });
             stats.forEach((item) => addCountryToTable(counter++, item.flag, item.name, item.qso))
             if (unknown) {
                 addCountryToTable(counter++, '-', 'Unknown', unknown);
@@ -6726,19 +6755,6 @@
             tbody.innerHTML = html;
         }
 
-        function download() {
-            let text = document.getElementById('output').value;
-            var element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-            element.setAttribute('download', 'sota.csv');
-
-            element.style.display = 'none';
-            document.body.appendChild(element);
-
-            element.click();
-
-            document.body.removeChild(element);
-        }
 
         var map, markers;
         function init() {
@@ -6750,6 +6766,7 @@
                 map = L.map('map').setView([49, 18], 9);
             }
 
+            // make the default pin half the size
             L.Icon.Default.prototype.options.iconSize[0] /= 2;
             L.Icon.Default.prototype.options.iconSize[1] /= 2;
             L.Icon.Default.prototype.options.iconAnchor[0] /= 2;
@@ -6757,9 +6774,7 @@
             L.Icon.Default.prototype.options.shadowSize[0] /= 2;
             L.Icon.Default.prototype.options.shadowSize[1] /= 2;
 
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 
             markers = L.layerGroup();
             markers.addTo(map);
@@ -6786,21 +6801,22 @@
             <div class="col-2 p-2">
                 <h3 class="text-center">OM6RT ADIF Mapper</h3>
                 <div class="row mb-2">
-                    <label for="callsign" class="col-sm-2 col-form-label col-form-label-sm">Callsign</label>
-                    <div class="col-sm-10">
+                    <label for="callsign" class="col-sm-4 col-form-label col-form-label-sm">My Callsign</label>
+                    <div class="col">
                         <input type="text" class="form-control form-control-sm" id="callsign" value="OM6RT/P">
                     </div>
                 </div>
                 <div class="row mb-2">
-                    <label for="callsign" class="col-sm-2 col-form-label col-form-label-sm">Locator</label>
-                    <div class="col-sm-10">
+                    <label for="callsign" class="col-sm-4 col-form-label col-form-label-sm">My Locator</label>
+                    <div class="col">
                         <input type="text" class="form-control form-control-sm" id="locator" value="JN99JF">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-sm-10">
-                        <button class="btn btn-primary btn-vsmall" onclick="selectFile()" onchange="">Load & Process</button>
+                    <div class="col-4"></div>
+                    <div class="col">
+                        <button class="btn btn-primary btn-vsmall" onclick="selectFile()">Load & Process</button>
+                        <button class="btn btn-secondary btn-vsmall" onclick="saveScreenshot()">Save screenshot</button>
                     </div>
                 </div>
                 <div class="row p-2">
