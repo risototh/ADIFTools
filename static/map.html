@@ -6614,25 +6614,24 @@
         }
 
         function mapQSOs(QSOs) {
+            markers.clearLayers();
+
             let points = [];
             // home qth point
             let home = grid2latlon(document.getElementById('locator').value);
             if (home != [0,0]) {
-                L.marker(home, {}).addTo(map);
+                markers.addLayer(L.marker(home));
                 points.push(home);
             }
 
-            markers.clearLayers();
             QSOs.forEach((qso) => {
                 if (qso.lat && qso.lon) {
-                    let marker = L.marker([qso.lat, qso.lon]);
-                    markers.addLayer(marker);
+                    markers.addLayer(L.marker([qso.lat, qso.lon]));
                     points.push([qso.lat, qso.lon]);
 
                     // line from home qth to remote qth
                     if (home != [0,0]) {
-                        let polyline = L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1});
-                        markers.addLayer(polyline);
+                        markers.addLayer(L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1}));
                     }
                 }
             });
