@@ -6757,13 +6757,12 @@
 
         var map, markers;
         function init() {
+            map = L.map('map', {
+                renderer: L.canvas() // due to html2canvas(), otherwise the layer with polylines will be offsetted
+            });
+
             let home = grid2latlon(document.getElementById('locator').value);
-            if (home != [0,0]) {
-                map = L.map('map').setView(home, 9);
-            }
-            else {
-                map = L.map('map').setView([49, 18], 9);
-            }
+            map.setView(home == [0,0] ? [49, 18] : home, 9);
 
             // make the default pin half the size
             L.Icon.Default.prototype.options.iconSize[0] /= 2;
