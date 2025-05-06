@@ -122,9 +122,12 @@
                     hisSummit = matches[1];
                 }
 
-                record.gridsquare.value = (record.gridsquare.value ?? '').toUpperCase();
-                let note = record.gridsquare.value + " rr" + record.rst_rcvd.value + " rs" + record.rst_sent.value;
-                if (record.name.value) {
+                let grid = '';
+                if (record.hasOwnProperty('gridsquare')) {
+                    grid = record.gridsquare.value.toUpperCase();
+                }
+                let note = grid + " rr" + record.rst_rcvd.value + " rs" + record.rst_sent.value;
+                if (record.hasOwnProperty('name') && record.name.value) {
                     note += " OP:" + record.name.value;
                 }
 
