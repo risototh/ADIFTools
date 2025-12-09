@@ -7469,7 +7469,6 @@
                     }
                 }
 
-            QSOs.forEach((qso) => {
                 if (qso.lat && qso.lon) {
                     markers.addLayer(L.marker([qso.lat, qso.lon]));
                     points.push([qso.lat, qso.lon]);
@@ -7477,7 +7476,7 @@
                     // line from home qth to remote qth
                     if (home != [0,0]) {
                         //markers.addLayer(L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1}));
-                        markers.addLayer(new L.Geodesic([home, [qso.lat, qso.lon]], {color: band2color(qso.band), weight: 2, steps: 6}));
+                        markers.addLayer(new L.Geodesic([home, [qso.lat, qso.lon]], {color: band2color(qso.band), weight: 1.5, steps: 6}));
                     }
                 }
             });
