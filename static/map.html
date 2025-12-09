@@ -2684,8 +2684,8 @@
                     "name": "Australia",
                     "notes": "",
                     "outgoingQslService": true,
-                    "prefix": "VH,VI,VJ,VK,AX",
-                    "prefixRegex": "^(V[H-K]|AX)[A-Z0-9/]*$",
+                    "prefix": "VH,VI,VJ,VK,VL,VM,VN,VZ,AX",
+                    "prefixRegex": "^(V[H-N]|VZ|AX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
                     "validStart": "",
@@ -7416,6 +7416,10 @@
 
                 let country = decoder.decode(record.call.value, date);
 
+                if (!country) {
+                    console.log('No DXCC match for ' + record.call.value);
+                }
+
                 let lat = 0, lon = 0;
                 if (record.lat && record.lat.value && record.lon && record.lon.value) {
                     [lat, lon] = latlon2float(record.lat.value, record.lon.value);
@@ -7425,8 +7429,7 @@
                 }
 
                 // fill in missing coordinates from dxcc list
-                if (!lat && !lon && (country.lat || country.lon)) {
-                    console.log(`Using ${country.name} coordinates for ${record.call.value}, ${country.lat}, ${country.lon}`);
+                if (!lat && !lon && country) {
                     lat = country.lat;
                     lon = country.lon;
                 }
