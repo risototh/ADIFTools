@@ -78,8 +78,10 @@
         function DXCCDecoder() {
             'use strict';
             // source from https://github.com/k0swe/dxcc-json/blob/main/dxcc.json
+            // expanded with default lat/lon from various sources
             this.prefixesJson = {
-                "dxcc": [{
+                dxcc: [
+                {
                     "continent": ["NA"],
                     "countryCode": "CA",
                     "cq": [1, 2, 3, 4, 5],
@@ -94,7 +96,9 @@
                     "prefixRegex": "^(V[A-GOY]|X[J-KL-O]|C[F-K])[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 44.35,
+                    "lon": -78.75
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -110,7 +114,9 @@
                     "prefixRegex": "",
                     "thirdPartyTraffic": false,
                     "validEnd": "1991-03-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 14.079623,
+                    "lon": 42.820867
                 }, {
                     "continent": ["AS"],
                     "countryCode": "AF",
@@ -126,7 +132,9 @@
                     "prefixRegex": "^(YA|T6)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 34.7,
+                    "lon": 65.8
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MU",
@@ -142,7 +150,9 @@
                     "prefixRegex": "^3B[67][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -10.45,
+                    "lon": 56.67
                 }, {
                     "continent": ["EU"],
                     "countryCode": "AX",
@@ -158,7 +168,9 @@
                     "prefixRegex": "^OH0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 60.13,
+                    "lon": 20.37
                 }, {
                     "continent": ["NA"],
                     "countryCode": "US",
@@ -174,7 +186,9 @@
                     "prefixRegex": "^[KANW]L[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 63.87,
+                    "lon": -153.78
                 }, {
                     "continent": ["EU"],
                     "countryCode": "AL",
@@ -190,7 +204,9 @@
                     "prefixRegex": "^ZA[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 41,
+                    "lon": 20
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -206,7 +222,9 @@
                     "prefixRegex": "^VQ9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1976-06-28",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -9.416667,
+                    "lon": 46.35
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AS",
@@ -222,7 +240,9 @@
                     "prefixRegex": "^KH8[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -14.32,
+                    "lon": -170.78
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TF",
@@ -238,7 +258,9 @@
                     "prefixRegex": "^FT\\/Z[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -37.85,
+                    "lon": 77.53
                 }, {
                     "continent": ["AS"],
                     "countryCode": "IN",
@@ -254,7 +276,9 @@
                     "prefixRegex": "^VU4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.37,
+                    "lon": 92.78
                 }, {
                     "continent": ["NA"],
                     "countryCode": "AI",
@@ -270,7 +294,9 @@
                     "prefixRegex": "^VP2E[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.23,
+                    "lon": -63
                 }, {
                     "continent": ["AN"],
                     "countryCode": "AQ",
@@ -286,7 +312,9 @@
                     "prefixRegex": "^(CE9|KC4)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -90,
+                    "lon": 0
                 }, {
                     "continent": ["AS"],
                     "countryCode": "AM",
@@ -302,7 +330,9 @@
                     "prefixRegex": "^EK[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 40.4,
+                    "lon": 44.9
                 }, {
                     "continent": ["AS"],
                     "countryCode": "RU",
@@ -318,7 +348,9 @@
                     "prefixRegex": "^(U[A-I][089]|R[A-Z089])[A-Z089/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 55.88,
+                    "lon": 84.08
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NZ",
@@ -334,7 +366,9 @@
                     "prefixRegex": "^ZL9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -50.75,
+                    "lon": 166.1
                 }, {
                     "continent": ["NA"],
                     "countryCode": "VE",
@@ -350,7 +384,9 @@
                     "prefixRegex": "^YV0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.67,
+                    "lon": -63.6
                 }, {
                     "continent": ["AS"],
                     "countryCode": "AZ",
@@ -366,7 +402,9 @@
                     "prefixRegex": "^4[JK][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 40.45,
+                    "lon": 47.37
                 }, {
                     "continent": ["NA"],
                     "countryCode": "ZZ",
@@ -382,7 +420,9 @@
                     "prefixRegex": "^HK0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1981-09-16",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.883333,
+                    "lon": -78.633333
                 }, {
                     "continent": ["OC"],
                     "countryCode": "UM",
@@ -398,7 +438,9 @@
                     "prefixRegex": "^KH1[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0,
+                    "lon": -176
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ES",
@@ -414,7 +456,9 @@
                     "prefixRegex": "^E[A-H]6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 39.6,
+                    "lon": 2.95
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PW",
@@ -430,7 +474,9 @@
                     "prefixRegex": "^T8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1994-01-01"
+                    "validStart": "1994-01-01",
+                    "lat": 7.45,
+                    "lon": 134.53
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -446,7 +492,9 @@
                     "prefixRegex": "",
                     "thirdPartyTraffic": false,
                     "validEnd": "1975-06-30",
-                    "validStart": "1967-05-04"
+                    "validStart": "1967-05-04",
+                    "lat": -5.2,
+                    "lon": 72.466667
                 }, {
                     "continent": ["AF"],
                     "countryCode": "BV",
@@ -462,7 +510,9 @@
                     "prefixRegex": "^3Y[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -54.42,
+                    "lon": 3.38
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -478,7 +528,9 @@
                     "prefixRegex": "^ZC5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-09-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 5.975,
+                    "lon": 116.0725
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -494,7 +546,9 @@
                     "prefixRegex": "^VQ6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1960-06-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9.560556,
+                    "lon": 44.054722
                 }, {
                     "continent": ["EU"],
                     "countryCode": "BY",
@@ -510,7 +564,9 @@
                     "prefixRegex": "^E[U-W][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 54,
+                    "lon": 28
                 }, {
                     "continent": ["NA"],
                     "countryCode": "ZZ",
@@ -526,7 +582,9 @@
                     "prefixRegex": "^KZ5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1979-09-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9.117778,
+                    "lon": -79.720278
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ES",
@@ -542,7 +600,9 @@
                     "prefixRegex": "^E[A-H]8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 28.1,
+                    "lon": -15.4
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -558,7 +618,9 @@
                     "prefixRegex": "^PK6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-04-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -2,
+                    "lon": 121
                 }, {
                     "continent": ["OC"],
                     "countryCode": "KI",
@@ -567,14 +629,16 @@
                     "entityCode": 31,
                     "flag": "🇰🇮",
                     "itu": [62],
-                    "name": "Phoenix Islands",
+                    "name": "Central Kiribati/Phoenix Islands",
                     "notes": "",
                     "outgoingQslService": false,
                     "prefix": "T31",
                     "prefixRegex": "^T31[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -4.5,
+                    "lon": -172
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ES",
@@ -590,7 +654,9 @@
                     "prefixRegex": "^E[A-H]9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35.9,
+                    "lon": -5.27
                 }, {
                     "continent": ["AF"],
                     "countryCode": "IO",
@@ -606,7 +672,9 @@
                     "prefixRegex": "^VQ9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -7.32,
+                    "lon": 72.42
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NZ",
@@ -622,7 +690,9 @@
                     "prefixRegex": "^ZL7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -43.85,
+                    "lon": -176.48
                 }, {
                     "continent": ["OC"],
                     "countryCode": "CX",
@@ -638,7 +708,9 @@
                     "prefixRegex": "^VK9X[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -10.48,
+                    "lon": 105.63
                 }, {
                     "continent": ["NA"],
                     "countryCode": "PF",
@@ -654,7 +726,9 @@
                     "prefixRegex": "^(FO|TX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 10.28,
+                    "lon": -109.22
                 }, {
                     "continent": ["NA"],
                     "countryCode": "CR",
@@ -670,7 +744,9 @@
                     "prefixRegex": "^TI9[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 5.52,
+                    "lon": -87.05
                 }, {
                     "continent": ["OC"],
                     "countryCode": "CC",
@@ -686,7 +762,9 @@
                     "prefixRegex": "^VK9C[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -12.1175,
+                    "lon": 96.895
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -702,7 +780,9 @@
                     "prefixRegex": "^F(H|B8)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1975-07-05",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -11.63,
+                    "lon": 43.3
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GR",
@@ -718,7 +798,9 @@
                     "prefixRegex": "^(SV|J4)9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35.23,
+                    "lon": 24.78
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TF",
@@ -734,7 +816,9 @@
                     "prefixRegex": "^FT\\/W[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -46.42,
+                    "lon": 51.75
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -750,7 +834,9 @@
                     "prefixRegex": "^CR8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1961-12-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 20.42,
+                    "lon": 72.85
                 }, {
                     "continent": ["NA"],
                     "countryCode": "PR",
@@ -766,7 +852,9 @@
                     "prefixRegex": "^KP5[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": "1979-03-01"
+                    "validStart": "1979-03-01",
+                    "lat": 18.08,
+                    "lon": -67.88
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -782,7 +870,9 @@
                     "prefixRegex": "^VQ9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1976-06-28",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -5.666667,
+                    "lon": 53.65
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GR",
@@ -798,7 +888,9 @@
                     "prefixRegex": "^(SV|J4)5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 36.17,
+                    "lon": 27.93
                 }, {
                     "continent": ["OC"],
                     "countryCode": "MY",
@@ -814,7 +906,9 @@
                     "prefixRegex": "^9M[68][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1963-09-16"
+                    "validStart": "1963-09-16",
+                    "lat": 2.68,
+                    "lon": 113.32
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CL",
@@ -830,7 +924,9 @@
                     "prefixRegex": "^CE0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -27.1,
+                    "lon": -109.37
                 }, {
                     "continent": ["OC"],
                     "countryCode": "KI",
@@ -839,14 +935,16 @@
                     "entityCode": 48,
                     "flag": "🇰🇮",
                     "itu": [61, 63],
-                    "name": "Line Islands",
+                    "name": "Eastern Kiribati/Line Islands",
                     "notes": "",
                     "outgoingQslService": false,
                     "prefix": "T32",
                     "prefixRegex": "^T32[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 1.7,
+                    "lon": -157.2
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GQ",
@@ -862,7 +960,9 @@
                     "prefixRegex": "^3C[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 1.7,
+                    "lon": 10.33
                 }, {
                     "continent": ["NA"],
                     "countryCode": "MX",
@@ -878,7 +978,9 @@
                     "prefixRegex": "^X[A-I][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 21.32,
+                    "lon": -100.23
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ER",
@@ -894,7 +996,9 @@
                     "prefixRegex": "^E3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15,
+                    "lon": 39
                 }, {
                     "continent": ["EU"],
                     "countryCode": "EE",
@@ -910,7 +1014,9 @@
                     "prefixRegex": "^ES[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 59,
+                    "lon": 25
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ET",
@@ -926,7 +1032,9 @@
                     "prefixRegex": "^ET[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9,
+                    "lon": 39
                 }, {
                     "continent": ["EU"],
                     "countryCode": "RU",
@@ -942,7 +1050,9 @@
                     "prefixRegex": "^(U[A-I][1-7]|R[A-Z0-7])[A-Z0-7/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 53.65,
+                    "lon": 41.37
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -958,7 +1068,9 @@
                     "prefixRegex": "^VQ9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1976-06-28",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -10.166667,
+                    "lon": 51.166667
                 }, {
                     "continent": ["SA"],
                     "countryCode": "BR",
@@ -974,7 +1086,9 @@
                     "prefixRegex": "^P[P-Y]0F[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -3.85,
+                    "lon": -32.43
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -990,7 +1104,9 @@
                     "prefixRegex": "^FQ8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1960-08-16",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -4.266667,
+                    "lon": 15.266667
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -1006,7 +1122,9 @@
                     "prefixRegex": "^FI8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1950-12-20",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 10.775556,
+                    "lon": 106.701944
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -1022,7 +1140,9 @@
                     "prefixRegex": "^FF[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1960-08-06",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 14.692778,
+                    "lon": -17.446667
                 }, {
                     "continent": ["NA"],
                     "countryCode": "BS",
@@ -1038,7 +1158,9 @@
                     "prefixRegex": "^C6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 24.25,
+                    "lon": -76
                 }, {
                     "continent": ["EU"],
                     "countryCode": "RU",
@@ -1054,7 +1176,9 @@
                     "prefixRegex": "^R1/F[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 80.68,
+                    "lon": 49.92
                 }, {
                     "continent": ["NA"],
                     "countryCode": "BB",
@@ -1070,7 +1194,9 @@
                     "prefixRegex": "^8P[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13.18,
+                    "lon": -59.53
                 }, {
                     "continent": ["SA"],
                     "countryCode": "GF",
@@ -1086,7 +1212,9 @@
                     "prefixRegex": "^FY[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 4,
+                    "lon": -53
                 }, {
                     "continent": ["NA"],
                     "countryCode": "BM",
@@ -1102,7 +1230,9 @@
                     "prefixRegex": "^VP9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 32.32,
+                    "lon": -64.73
                 }, {
                     "continent": ["NA"],
                     "countryCode": "VG",
@@ -1118,7 +1248,9 @@
                     "prefixRegex": "^VP2V[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.33,
+                    "lon": -64.75
                 }, {
                     "continent": ["NA"],
                     "countryCode": "BZ",
@@ -1134,7 +1266,9 @@
                     "prefixRegex": "^V3[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 16.97,
+                    "lon": -88.67
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -1150,7 +1284,9 @@
                     "prefixRegex": "^FN8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1954-10-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 22.643118,
+                    "lon": 78.333818
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -1166,7 +1302,9 @@
                     "prefixRegex": "^(8Z5|9K3)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1969-12-14",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 28.516752,
+                    "lon": 48.069130
                 }, {
                     "continent": ["NA"],
                     "countryCode": "KY",
@@ -1182,7 +1320,9 @@
                     "prefixRegex": "^ZF[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 19.32,
+                    "lon": -81.22
                 }, {
                     "continent": ["NA"],
                     "countryCode": "CU",
@@ -1198,7 +1338,9 @@
                     "prefixRegex": "^C[LMO]|T4[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 21.5,
+                    "lon": -80
                 }, {
                     "continent": ["SA"],
                     "countryCode": "EC",
@@ -1214,7 +1356,9 @@
                     "prefixRegex": "^H[CD]8[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -0.78,
+                    "lon": -91.03
                 }, {
                     "continent": ["NA"],
                     "countryCode": "DO",
@@ -1230,7 +1374,9 @@
                     "prefixRegex": "^HI[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 19.13,
+                    "lon": -70.68
                 }, {
                     "continent": ["NA"],
                     "countryCode": "SV",
@@ -1246,7 +1392,9 @@
                     "prefixRegex": "^(YS|HU)[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 14,
+                    "lon": -89
                 }, {
                     "continent": ["AS"],
                     "countryCode": "GE",
@@ -1262,7 +1410,9 @@
                     "prefixRegex": "^4L[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 42,
+                    "lon": 45
                 }, {
                     "continent": ["NA"],
                     "countryCode": "GT",
@@ -1278,7 +1428,9 @@
                     "prefixRegex": "^T[GD][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.5,
+                    "lon": -90.3
                 }, {
                     "continent": ["NA"],
                     "countryCode": "GD",
@@ -1294,7 +1446,9 @@
                     "prefixRegex": "^J3[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.13,
+                    "lon": -61.68
                 }, {
                     "continent": ["NA"],
                     "countryCode": "HT",
@@ -1310,7 +1464,9 @@
                     "prefixRegex": "^HH[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 19.02,
+                    "lon": -72.18
                 }, {
                     "continent": ["NA"],
                     "countryCode": "GP",
@@ -1326,7 +1482,9 @@
                     "prefixRegex": "^(FG|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 16.13,
+                    "lon": -61.67
                 }, {
                     "continent": ["NA"],
                     "countryCode": "HN",
@@ -1342,7 +1500,9 @@
                     "prefixRegex": "^H[QR][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15,
+                    "lon": -87
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -1358,7 +1518,9 @@
                     "prefixRegex": "^D[A-M][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1973-09-16",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 51,
+                    "lon": 10
                 }, {
                     "continent": ["NA"],
                     "countryCode": "JM",
@@ -1374,7 +1536,9 @@
                     "prefixRegex": "^6Y[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.2,
+                    "lon": -77.47
                 }, {
                     "continent": ["NA"],
                     "countryCode": "MQ",
@@ -1390,7 +1554,9 @@
                     "prefixRegex": "^(FM|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 14.7,
+                    "lon": -61.03
                 }, {
                     "continent": ["SA"],
                     "countryCode": "ZZ",
@@ -1406,7 +1572,9 @@
                     "prefixRegex": "^PJ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "2010-10-09",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.174164,
+                    "lon": -68.585394
                 }, {
                     "continent": ["NA"],
                     "countryCode": "NI",
@@ -1422,7 +1590,9 @@
                     "prefixRegex": "^(YN|H[67T])[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.88,
+                    "lon": -85.05
                 }, {
                     "continent": ["NA"],
                     "countryCode": "PA",
@@ -1438,7 +1608,9 @@
                     "prefixRegex": "^H[OP][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9,
+                    "lon": -80
                 }, {
                     "continent": ["NA"],
                     "countryCode": "TC",
@@ -1454,7 +1626,9 @@
                     "prefixRegex": "^VP5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 21.77,
+                    "lon": -71.75
                 }, {
                     "continent": ["SA"],
                     "countryCode": "TT",
@@ -1470,7 +1644,9 @@
                     "prefixRegex": "^9[YZ][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 10.38,
+                    "lon": -61.28
                 }, {
                     "continent": ["SA"],
                     "countryCode": "AW",
@@ -1486,7 +1662,9 @@
                     "prefixRegex": "^P4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1986-01-01"
+                    "validStart": "1986-01-01",
+                    "lat": 12.53,
+                    "lon": -69.98
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -1502,7 +1680,9 @@
                     "prefixRegex": "",
                     "thirdPartyTraffic": false,
                     "validEnd": "1978-02-28",
-                    "validStart": "1967-05-04"
+                    "validStart": "1967-05-04",
+                    "lat": -12.32,
+                    "lon": 46.45
                 }, {
                     "continent": ["NA"],
                     "countryCode": "AG",
@@ -1518,7 +1698,9 @@
                     "prefixRegex": "^V2[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 17.07,
+                    "lon": -61.8
                 }, {
                     "continent": ["NA"],
                     "countryCode": "DM",
@@ -1534,7 +1716,9 @@
                     "prefixRegex": "^J7[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.43,
+                    "lon": -61.35
                 }, {
                     "continent": ["NA"],
                     "countryCode": "MS",
@@ -1550,7 +1734,9 @@
                     "prefixRegex": "^VP2M[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 16.75,
+                    "lon": -62.18
                 }, {
                     "continent": ["NA"],
                     "countryCode": "LC",
@@ -1566,7 +1752,9 @@
                     "prefixRegex": "^J6[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13.87,
+                    "lon": -61
                 }, {
                     "continent": ["NA"],
                     "countryCode": "VC",
@@ -1582,7 +1770,9 @@
                     "prefixRegex": "^J8[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13.23,
+                    "lon": -61.2
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TF",
@@ -1598,7 +1788,9 @@
                     "prefixRegex": "^(FT\\/G|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-06-25"
+                    "validStart": "1960-06-25",
+                    "lat": -11.55,
+                    "lon": 47.28
                 }, {
                     "continent": ["SA"],
                     "countryCode": "AR",
@@ -1614,7 +1806,9 @@
                     "prefixRegex": "^L[O-W]|AY|AZ[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -34.8,
+                    "lon": -65.92
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -1630,7 +1824,9 @@
                     "prefixRegex": "^CR8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1961-12-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.5,
+                    "lon": 73.83
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -1646,7 +1842,9 @@
                     "prefixRegex": "^ZD4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1957-03-05",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 6.3953,
+                    "lon": 0.4703
                 }, {
                     "continent": ["OC"],
                     "countryCode": "GU",
@@ -1662,7 +1860,9 @@
                     "prefixRegex": "^KH2[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13.37,
+                    "lon": 144.7
                 }, {
                     "continent": ["SA"],
                     "countryCode": "BO",
@@ -1678,7 +1878,9 @@
                     "prefixRegex": "^CP[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -17,
+                    "lon": -65
                 }, {
                     "continent": ["NA"],
                     "countryCode": "US",
@@ -1694,7 +1896,9 @@
                     "prefixRegex": "^KG4[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 20,
+                    "lon": -75
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GG",
@@ -1710,7 +1914,9 @@
                     "prefixRegex": "^G[UP][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 49.45,
+                    "lon": -2.58
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GN",
@@ -1726,7 +1932,9 @@
                     "prefixRegex": "^3X[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 11,
+                    "lon": -10.68
                 }, {
                     "continent": ["SA"],
                     "countryCode": "BR",
@@ -1742,7 +1950,9 @@
                     "prefixRegex": "^(P[P-Y]|Z[V-Z])[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -10,
+                    "lon": -53
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GW",
@@ -1758,7 +1968,9 @@
                     "prefixRegex": "^J5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12,
+                    "lon": -15
                 }, {
                     "continent": ["OC"],
                     "countryCode": "US",
@@ -1774,7 +1986,9 @@
                     "prefixRegex": "^KH[67][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 19.67,
+                    "lon": -155.57
                 }, {
                     "continent": ["AF"],
                     "countryCode": "HM",
@@ -1790,7 +2004,9 @@
                     "prefixRegex": "^VK0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -53.08,
+                    "lon": 73.5
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CL",
@@ -1806,7 +2022,9 @@
                     "prefixRegex": "^(?:C[A-D][A-Z0-9/]*|CE[1-8][A-Z0-9/]*|3G[A-Z0-9/]*|X[QR][A-Z1-9/]*)$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -30,
+                    "lon": -71
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -1822,7 +2040,9 @@
                     "prefixRegex": "^EA9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1969-05-13",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 29.366667,
+                    "lon": -10.183333
                 }, {
                     "continent": ["EU"],
                     "countryCode": "IM",
@@ -1838,7 +2058,9 @@
                     "prefixRegex": "^G[DT][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 54.2,
+                    "lon": -4.53
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -1854,7 +2076,9 @@
                     "prefixRegex": "^I5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1960-06-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 2,
+                    "lon": 45
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CO",
@@ -1870,7 +2094,9 @@
                     "prefixRegex": "^(H[JK]|5[JK])[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 5,
+                    "lon": -74
                 }, {
                     "continent": ["EU"],
                     "countryCode": "UN",
@@ -1886,7 +2112,9 @@
                     "prefixRegex": "^4U[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 46.17,
+                    "lon": 6.05
                 }, {
                     "continent": ["EU"],
                     "countryCode": "SJ",
@@ -1902,7 +2130,9 @@
                     "prefixRegex": "^JX[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 71.05,
+                    "lon": -8.28
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -1918,7 +2148,9 @@
                     "prefixRegex": "^PK[1-3][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-04-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -7.491667,
+                    "lon": 110.004444
                 }, {
                     "continent": ["SA"],
                     "countryCode": "EC",
@@ -1934,7 +2166,9 @@
                     "prefixRegex": "^H[CD][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -1.4,
+                    "lon": -78.4
                 }, {
                     "continent": ["EU"],
                     "countryCode": "JE",
@@ -1950,7 +2184,9 @@
                     "prefixRegex": "^G[JH][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 49.22,
+                    "lon": -2.18
                 }, {
                     "continent": ["OC"],
                     "countryCode": "US",
@@ -1966,7 +2202,9 @@
                     "prefixRegex": "^KH3[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 16.72,
+                    "lon": -169.53
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TF",
@@ -1979,10 +2217,12 @@
                     "notes": "",
                     "outgoingQslService": true,
                     "prefix": "FT/J,FT/E,TO",
-                    "prefixRegex": "^(FT\\/(J|E)|TO)[A-Z0-9/]*$", // fix riso
+                    "prefixRegex": "^(FT\\/(J|E)|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-06-25"
+                    "validStart": "1960-06-25",
+                    "lat": -17.055556,
+                    "lon": 42.725
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CL",
@@ -1998,7 +2238,9 @@
                     "prefixRegex": "^CE0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -33.6,
+                    "lon": -78.85
                 }, {
                     "continent": ["EU"],
                     "countryCode": "RU",
@@ -2014,7 +2256,9 @@
                     "prefixRegex": "^[UR]A2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 54.72,
+                    "lon": 20.52
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -2030,7 +2274,9 @@
                     "prefixRegex": "^VS9K[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1982-03-10",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.35,
+                    "lon": 42.59
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -2046,7 +2292,9 @@
                     "prefixRegex": "^UN1[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1960-06-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 64.525278,
+                    "lon": 34.765833
                 }, {
                     "continent": ["SA"],
                     "countryCode": "GY",
@@ -2062,7 +2310,9 @@
                     "prefixRegex": "^8R[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 6.02,
+                    "lon": -59.45
                 }, {
                     "continent": ["AS"],
                     "countryCode": "KZ",
@@ -2078,7 +2328,9 @@
                     "prefixRegex": "^U[N-Q][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 48.17,
+                    "lon": 65.18
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TF",
@@ -2094,7 +2346,9 @@
                     "prefixRegex": "^FT\\/X[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -49,
+                    "lon": 69.27
                 }, {
                     "continent": ["SA"],
                     "countryCode": "PY",
@@ -2110,7 +2364,9 @@
                     "prefixRegex": "^ZP[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -25.27,
+                    "lon": -57.67
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NZ",
@@ -2126,7 +2382,9 @@
                     "prefixRegex": "^ZL8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -29.25,
+                    "lon": -177.92
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -2142,7 +2400,9 @@
                     "prefixRegex": "^KH5K[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "2016-03-29",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 6.4,
+                    "lon": -162.4
                 }, {
                     "continent": ["AS"],
                     "countryCode": "KG",
@@ -2158,7 +2418,9 @@
                     "prefixRegex": "^EX[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 41.7,
+                    "lon": 74.13
                 }, {
                     "continent": ["SA"],
                     "countryCode": "PE",
@@ -2174,7 +2436,9 @@
                     "prefixRegex": "^O[A-C][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -10,
+                    "lon": -76
                 }, {
                     "continent": ["AS"],
                     "countryCode": "KR",
@@ -2190,7 +2454,9 @@
                     "prefixRegex": "^(DT|DS|HL|6[K-N]|D[78])[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 36.23,
+                    "lon": 127.9
                 }, {
                     "continent": ["OC"],
                     "countryCode": "US",
@@ -2206,7 +2472,9 @@
                     "prefixRegex": "^KH7K[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 29,
+                    "lon": -178
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -2222,7 +2490,9 @@
                     "prefixRegex": "^VS9H[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1967-11-29",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 17.5,
+                    "lon": 56
                 }, {
                     "continent": ["SA"],
                     "countryCode": "SR",
@@ -2238,7 +2508,9 @@
                     "prefixRegex": "^PZ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 4,
+                    "lon": -56
                 }, {
                     "continent": ["SA"],
                     "countryCode": "FK",
@@ -2254,7 +2526,9 @@
                     "prefixRegex": "^VP8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -51.63,
+                    "lon": -58.72
                 }, {
                     "continent": ["AS"],
                     "countryCode": "IN",
@@ -2270,7 +2544,9 @@
                     "prefixRegex": "^VU7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 11.23,
+                    "lon": 72.78
                 }, {
                     "continent": ["AS"],
                     "countryCode": "LA",
@@ -2286,7 +2562,9 @@
                     "prefixRegex": "^XW[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.2,
+                    "lon": 104.55
                 }, {
                     "continent": ["SA"],
                     "countryCode": "UY",
@@ -2302,7 +2580,9 @@
                     "prefixRegex": "^C[V-X][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -33,
+                    "lon": -56
                 }, {
                     "continent": ["EU"],
                     "countryCode": "LV",
@@ -2318,7 +2598,9 @@
                     "prefixRegex": "^YL[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 57.03,
+                    "lon": 24.65
                 }, {
                     "continent": ["EU"],
                     "countryCode": "LT",
@@ -2334,7 +2616,9 @@
                     "prefixRegex": "^LY[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 55.45,
+                    "lon": 23.63
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AU",
@@ -2350,7 +2634,9 @@
                     "prefixRegex": "^VK9L[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -31.55,
+                    "lon": 159.08
                 }, {
                     "continent": ["SA"],
                     "countryCode": "VE",
@@ -2366,7 +2652,9 @@
                     "prefixRegex": "^(Y[V-Y]|4M)[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 8,
+                    "lon": -66
                 }, {
                     "continent": ["EU"],
                     "countryCode": "PT",
@@ -2382,7 +2670,9 @@
                     "prefixRegex": "^CU[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 38.7,
+                    "lon": -27.23
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AU",
@@ -2398,7 +2688,9 @@
                     "prefixRegex": "^(V[H-K]|AX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -23.7,
+                    "lon": 132.33
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -2414,7 +2706,9 @@
                     "prefixRegex": "^R1/M[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "2012-02-16",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 60.63944,
+                    "lon": 28.56611
                 }, {
                     "continent": ["AS"],
                     "countryCode": "MO",
@@ -2430,7 +2724,9 @@
                     "prefixRegex": "^XX9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 22.1,
+                    "lon": 113.5
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AU",
@@ -2446,7 +2742,9 @@
                     "prefixRegex": "^VK0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -54.6,
+                    "lon": 158.88
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -2462,7 +2760,9 @@
                     "prefixRegex": "^4W[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1990-05-21",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.354722,
+                    "lon": 44.206667
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -2478,7 +2778,9 @@
                     "prefixRegex": "^9M[245][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-09-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 3.95,
+                    "lon": 102.23
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NR",
@@ -2494,7 +2796,9 @@
                     "prefixRegex": "^C2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -0.52,
+                    "lon": 166.92
                 }, {
                     "continent": ["OC"],
                     "countryCode": "VU",
@@ -2510,7 +2814,9 @@
                     "prefixRegex": "^YJ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -17.67,
+                    "lon": 168.38
                 }, {
                     "continent": ["AS", "AF"],
                     "countryCode": "MV",
@@ -2526,7 +2832,9 @@
                     "prefixRegex": "^8Q[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 4.15,
+                    "lon": 73.45
                 }, {
                     "continent": ["OC"],
                     "countryCode": "TO",
@@ -2542,7 +2850,9 @@
                     "prefixRegex": "^A3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -21.22,
+                    "lon": -175.13
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CO",
@@ -2558,7 +2868,9 @@
                     "prefixRegex": "^HK0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 3.98,
+                    "lon": -81.58
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NC",
@@ -2574,7 +2886,9 @@
                     "prefixRegex": "^(FK|TX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -21.5,
+                    "lon": 165.5
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PG",
@@ -2590,7 +2904,9 @@
                     "prefixRegex": "^P2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1975-09-16"
+                    "validStart": "1975-09-16",
+                    "lat": -9.5,
+                    "lon": 147.12
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -2606,7 +2922,9 @@
                     "prefixRegex": "^C9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-09-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 43,
+                    "lon": 125
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MU",
@@ -2622,7 +2940,9 @@
                     "prefixRegex": "^3B8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -20.35,
+                    "lon": 57.5
                 }, {
                     "continent": ["OC"],
                     "countryCode": "MP",
@@ -2638,7 +2958,9 @@
                     "prefixRegex": "^KH0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.18,
+                    "lon": 145.72
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -2654,7 +2976,9 @@
                     "prefixRegex": "^OJ0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 60,
+                    "lon": 19
                 }, {
                     "continent": ["OC"],
                     "countryCode": "MH",
@@ -2670,7 +2994,9 @@
                     "prefixRegex": "^V7[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9.08,
+                    "lon": 167.33
                 }, {
                     "continent": ["AF"],
                     "countryCode": "YT",
@@ -2686,7 +3012,9 @@
                     "prefixRegex": "^(FH|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1975-07-06"
+                    "validStart": "1975-07-06",
+                    "lat": -12.88,
+                    "lon": 45.15
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NZ",
@@ -2702,7 +3030,9 @@
                     "prefixRegex": "^Z[L-M][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -41.83,
+                    "lon": 173.27
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AU",
@@ -2718,7 +3048,9 @@
                     "prefixRegex": "^VK9M[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -17.4,
+                    "lon": 155.85
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PN",
@@ -2734,7 +3066,9 @@
                     "prefixRegex": "^VP6[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -24.35,
+                    "lon": -128.32
                 }, {
                     "continent": ["OC"],
                     "countryCode": "FM",
@@ -2750,7 +3084,9 @@
                     "prefixRegex": "^V6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 6.88,
+                    "lon": 158.2
                 }, {
                     "continent": ["OC"],
                     "countryCode": "US",
@@ -2766,7 +3102,9 @@
                     "prefixRegex": "^KH4[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 28.2,
+                    "lon": -177.37
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PF",
@@ -2782,7 +3120,9 @@
                     "prefixRegex": "^(FO|TX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -17.65,
+                    "lon": -149.4
                 }, {
                     "continent": ["OC"],
                     "countryCode": "FJ",
@@ -2798,7 +3138,9 @@
                     "prefixRegex": "^3D2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -17.78,
+                    "lon": 177.92
                 }, {
                     "continent": ["OC"],
                     "countryCode": "JP",
@@ -2814,7 +3156,9 @@
                     "prefixRegex": "^JD1[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 24.28,
+                    "lon": 153.97
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -2830,7 +3174,9 @@
                     "prefixRegex": "^1M[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1972-07-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -23.633333,
+                    "lon": -178.9
                 }, {
                     "continent": ["EU"],
                     "countryCode": "MD",
@@ -2846,7 +3192,9 @@
                     "prefixRegex": "^ER[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 47,
+                    "lon": 29
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GR",
@@ -2862,7 +3210,9 @@
                     "prefixRegex": "^SV/A[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 40,
+                    "lon": 24
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MZ",
@@ -2878,7 +3228,9 @@
                     "prefixRegex": "^C[89][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -18.25,
+                    "lon": 35
                 }, {
                     "continent": ["NA"],
                     "countryCode": "US",
@@ -2894,7 +3246,9 @@
                     "prefixRegex": "^KP1[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.4,
+                    "lon": -75
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -2910,7 +3264,9 @@
                     "prefixRegex": "^PK5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-04-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0,
+                    "lon": 114
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -2926,7 +3282,9 @@
                     "prefixRegex": "^JZ0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-04-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -2.533,
+                    "lon": 140.717
                 }, {
                     "continent": ["OC"],
                     "countryCode": "SB",
@@ -2942,7 +3300,9 @@
                     "prefixRegex": "^H4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -9,
+                    "lon": 160
                 }, {
                     "continent": ["NA"],
                     "countryCode": "ZZ",
@@ -2958,7 +3318,9 @@
                     "prefixRegex": "^VO[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1949-03-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 53.23,
+                    "lon": -59.999167
                 }, {
                     "continent": ["AF"],
                     "countryCode": "NE",
@@ -2974,7 +3336,9 @@
                     "prefixRegex": "^5U[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-03"
+                    "validStart": "1960-08-03",
+                    "lat": 17.63,
+                    "lon": 9.43
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NU",
@@ -2990,7 +3354,9 @@
                     "prefixRegex": "^E6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -19.03,
+                    "lon": -169.85
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AU",
@@ -3006,7 +3372,9 @@
                     "prefixRegex": "^VK9N[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -29.03,
+                    "lon": 167.93
                 }, {
                     "continent": ["OC"],
                     "countryCode": "WS",
@@ -3022,7 +3390,9 @@
                     "prefixRegex": "^5W[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -13.93,
+                    "lon": -171.7
                 }, {
                     "continent": ["OC"],
                     "countryCode": "CK",
@@ -3038,7 +3408,9 @@
                     "prefixRegex": "^E5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -10.02,
+                    "lon": -161.08
                 }, {
                     "continent": ["AS"],
                     "countryCode": "JP",
@@ -3054,7 +3426,9 @@
                     "prefixRegex": "^JD1[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 27.05,
+                    "lon": 142.2
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3070,7 +3444,9 @@
                     "prefixRegex": "^(KR[68]|JR6|KA6)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1972-05-14",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 26.5,
+                    "lon": 127.9
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3086,7 +3462,9 @@
                     "prefixRegex": "^7J1[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1980-11-30",
-                    "validStart": "1976-05-30"
+                    "validStart": "1976-05-30",
+                    "lat": 20.4225,
+                    "lon": 136.09
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GQ",
@@ -3102,7 +3480,9 @@
                     "prefixRegex": "^3C0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -1.43,
+                    "lon": 5.62
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3118,7 +3498,9 @@
                     "prefixRegex": "^(ZC6|4X1)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1968-06-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 31.28,
+                    "lon": 34.27
                 }, {
                     "continent": ["OC"],
                     "countryCode": "US",
@@ -3134,7 +3516,9 @@
                     "prefixRegex": "^KH5[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 5.87,
+                    "lon": -162.07
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -3150,7 +3534,9 @@
                     "prefixRegex": "^(P2|VK9)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1975-09-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -9.432601,
+                    "lon": 147.189621
                 }, {
                     "continent": ["AN"],
                     "countryCode": "BV",
@@ -3166,7 +3552,9 @@
                     "prefixRegex": "^3Y[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 68.85,
+                    "lon": 90.583333
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -3182,7 +3570,9 @@
                     "prefixRegex": "^CR(8|10)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1976-09-14",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -8.554722,
+                    "lon": 125.578611
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZA",
@@ -3198,7 +3588,9 @@
                     "prefixRegex": "^ZS8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -46.88,
+                    "lon": 37.72
                 }, {
                     "continent": ["NA"],
                     "countryCode": "PR",
@@ -3214,7 +3606,9 @@
                     "prefixRegex": "^KP[4]|WP[4]|NP[4][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.18,
+                    "lon": -66.55
                 }, {
                     "continent": ["EU"],
                     "countryCode": "AD",
@@ -3230,7 +3624,9 @@
                     "prefixRegex": "^C3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 42.58,
+                    "lon": 1.62
                 }, {
                     "continent": ["NA"],
                     "countryCode": "MX",
@@ -3246,7 +3642,9 @@
                     "prefixRegex": "^X[A-I]4[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.77,
+                    "lon": -110.97
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SH",
@@ -3262,7 +3660,9 @@
                     "prefixRegex": "^ZD8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -7.93,
+                    "lon": -14.37
                 }, {
                     "continent": ["EU"],
                     "countryCode": "AT",
@@ -3278,7 +3678,9 @@
                     "prefixRegex": "^OE[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 47.33,
+                    "lon": 13.33
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MU",
@@ -3294,7 +3696,9 @@
                     "prefixRegex": "^3B9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -19.7,
+                    "lon": 63.42
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -3310,7 +3714,9 @@
                     "prefixRegex": "^9U5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1962-06-30",
-                    "validStart": "1960-07-01"
+                    "validStart": "1960-07-01",
+                    "lat": -2.7,
+                    "lon": 29.9
                 }, {
                     "continent": ["EU"],
                     "countryCode": "BE",
@@ -3326,7 +3732,9 @@
                     "prefixRegex": "^O[N-T][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 50.7,
+                    "lon": 4.85
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -3342,7 +3750,9 @@
                     "prefixRegex": "^9S4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1957-03-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 49.383333,
+                    "lon": 6.833333
                 }, {
                     "continent": ["NA"],
                     "countryCode": "CA",
@@ -3358,7 +3768,9 @@
                     "prefixRegex": "^CY0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 43.93,
+                    "lon": -59.9
                 }, {
                     "continent": ["EU"],
                     "countryCode": "BG",
@@ -3374,7 +3786,9 @@
                     "prefixRegex": "^LZ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 42.83,
+                    "lon": 25.08
                 }, {
                     "continent": ["NA"],
                     "countryCode": "FR",
@@ -3390,7 +3804,9 @@
                     "prefixRegex": "^(FS|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 18.08,
+                    "lon": -63.03
                 }, {
                     "continent": ["EU"],
                     "countryCode": "FR",
@@ -3406,7 +3822,9 @@
                     "prefixRegex": "^TK[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 42,
+                    "lon": 9
                 }, {
                     "continent": ["AS"],
                     "countryCode": "CY",
@@ -3422,7 +3840,9 @@
                     "prefixRegex": "^(5B|C4|P3)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35,
+                    "lon": 33
                 }, {
                     "continent": ["NA"],
                     "countryCode": "CO",
@@ -3438,7 +3858,9 @@
                     "prefixRegex": "^HK0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.55,
+                    "lon": -81.72
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CL",
@@ -3454,7 +3876,9 @@
                     "prefixRegex": "^CE0[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -26.32,
+                    "lon": -80
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -3470,7 +3894,9 @@
                     "prefixRegex": "^O[K-M][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1992-12-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 50.083333,
+                    "lon": 14.416667
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ST",
@@ -3486,7 +3912,9 @@
                     "prefixRegex": "^S9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0.22,
+                    "lon": 6.57
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -3502,7 +3930,9 @@
                     "prefixRegex": "^VS4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-09-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 2.5,
+                    "lon": 113
                 }, {
                     "continent": ["EU"],
                     "countryCode": "DK",
@@ -3518,7 +3948,9 @@
                     "prefixRegex": "^(O[U-WZ]|5[P-Q])[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 56,
+                    "lon": 10
                 }, {
                     "continent": ["EU"],
                     "countryCode": "FO",
@@ -3534,7 +3966,9 @@
                     "prefixRegex": "^OY[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 62.07,
+                    "lon": -6.93
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GB",
@@ -3550,7 +3984,9 @@
                     "prefixRegex": "^(G|GX|M|2E)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 52.77,
+                    "lon": -1.47
                 }, {
                     "continent": ["EU"],
                     "countryCode": "FI",
@@ -3566,7 +4002,9 @@
                     "prefixRegex": "^O[F-I][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 63.78,
+                    "lon": 27.08
                 }, {
                     "continent": ["EU"],
                     "countryCode": "IT",
@@ -3582,7 +4020,9 @@
                     "prefixRegex": "^I[SM]0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 40.15,
+                    "lon": 9.27
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3598,7 +4038,9 @@
                     "prefixRegex": "^8Z4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1981-12-25",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 28.983034,
+                    "lon": 45.547498
                 }, {
                     "continent": ["EU"],
                     "countryCode": "FR",
@@ -3614,7 +4056,9 @@
                     "prefixRegex": "^(F|HW|HX|HY|TH|TM|TP|TQ|TV|TW|TX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 46,
+                    "lon": 2
                 }, {
                     "continent": ["NA"],
                     "countryCode": "ZZ",
@@ -3630,7 +4074,9 @@
                     "prefixRegex": "^(HK0|KP3|KS4)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1981-09-16",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13.964621,
+                    "lon": -80.122878
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -3646,7 +4092,9 @@
                     "prefixRegex": "^(DM|Y[2-9])[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1990-10-02",
-                    "validStart": "1973-09-17"
+                    "validStart": "1973-09-17",
+                    "lat": 52.516667,
+                    "lon": 13.4
                 }, {
                     "continent": ["EU"],
                     "countryCode": "DE",
@@ -3662,7 +4110,9 @@
                     "prefixRegex": "^D[A-R][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 51,
+                    "lon": 9
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3678,7 +4128,9 @@
                     "prefixRegex": "^AC3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1975-04-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 27.33,
+                    "lon": 88.62
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SO",
@@ -3694,7 +4146,9 @@
                     "prefixRegex": "^(T5|6O)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 2.03,
+                    "lon": 45.35
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GI",
@@ -3710,7 +4164,9 @@
                     "prefixRegex": "^ZB2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 36.15,
+                    "lon": -5.37
                 }, {
                     "continent": ["OC"],
                     "countryCode": "CK",
@@ -3726,7 +4182,9 @@
                     "prefixRegex": "^E5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -21.9,
+                    "lon": -157.93
                 }, {
                     "continent": ["SA"],
                     "countryCode": "GB",
@@ -3742,7 +4200,9 @@
                     "prefixRegex": "^(VP8|LU)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -54.48,
+                    "lon": -37.08
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GR",
@@ -3758,7 +4218,9 @@
                     "prefixRegex": "^(S[V-Z]|J4)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 39.78,
+                    "lon": 21.78
                 }, {
                     "continent": ["NA"],
                     "countryCode": "GL",
@@ -3774,7 +4236,9 @@
                     "prefixRegex": "^OX[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 74,
+                    "lon": -42.78
                 }, {
                     "continent": ["SA"],
                     "countryCode": "AQ",
@@ -3790,7 +4254,9 @@
                     "prefixRegex": "^(VP8|LU)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -60.6,
+                    "lon": -45.55
                 }, {
                     "continent": ["EU"],
                     "countryCode": "HU",
@@ -3806,7 +4272,9 @@
                     "prefixRegex": "^H[AG][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 47.12,
+                    "lon": 19.28
                 }, {
                     "continent": ["SA"],
                     "countryCode": "GB",
@@ -3822,7 +4290,9 @@
                     "prefixRegex": "^(VP8|LU)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -58.43,
+                    "lon": -26.33
                 }, {
                     "continent": ["SA"],
                     "countryCode": "AQ",
@@ -3838,7 +4308,9 @@
                     "prefixRegex": "^(VP8|LU|CE9|HF0|4K1)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -62.08,
+                    "lon": -58.67
                 }, {
                     "continent": ["EU"],
                     "countryCode": "IS",
@@ -3854,7 +4326,9 @@
                     "prefixRegex": "^TF[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 64.8,
+                    "lon": -18.73
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3870,7 +4344,9 @@
                     "prefixRegex": "^VS9[APS][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1990-05-21",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.8,
+                    "lon": 45.03
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -3886,7 +4362,9 @@
                     "prefixRegex": "^ST0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1994-12-31",
-                    "validStart": "1972-05-07"
+                    "validStart": "1972-05-07",
+                    "lat": 4.853889,
+                    "lon": 31.5825
                 }, {
                     "continent": ["EU"],
                     "countryCode": "IE",
@@ -3902,7 +4380,9 @@
                     "prefixRegex": "^E[IJ][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 53.13,
+                    "lon": -8.02
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -3918,7 +4398,9 @@
                     "prefixRegex": "^1A[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 41.9,
+                    "lon": 12.43
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -3934,7 +4416,9 @@
                     "prefixRegex": "",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9.88,
+                    "lon": 114.23
                 }, {
                     "continent": ["EU"],
                     "countryCode": "IT",
@@ -3950,7 +4434,9 @@
                     "prefixRegex": "^I[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 42.82,
+                    "lon": 12.58
                 }, {
                     "continent": ["NA"],
                     "countryCode": "KN",
@@ -3966,7 +4452,9 @@
                     "prefixRegex": "^V4[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 17.37,
+                    "lon": -62.78
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SH",
@@ -3982,7 +4470,9 @@
                     "prefixRegex": "^ZD7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -15.97,
+                    "lon": -5.72
                 }, {
                     "continent": ["EU"],
                     "countryCode": "LI",
@@ -3998,7 +4488,9 @@
                     "prefixRegex": "^HB0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 47.13,
+                    "lon": 9.57
                 }, {
                     "continent": ["NA"],
                     "countryCode": "CA",
@@ -4014,7 +4506,9 @@
                     "prefixRegex": "^CY9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 47,
+                    "lon": -60
                 }, {
                     "continent": ["SA"],
                     "countryCode": "BR",
@@ -4030,7 +4524,9 @@
                     "prefixRegex": "^P[P-Y]0S[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0,
+                    "lon": -29
                 }, {
                     "continent": ["EU"],
                     "countryCode": "LU",
@@ -4046,7 +4542,9 @@
                     "prefixRegex": "^LX[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 50,
+                    "lon": 6
                 }, {
                     "continent": ["NA"],
                     "countryCode": "ZZ",
@@ -4062,7 +4560,9 @@
                     "prefixRegex": "^PJ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "2010-10-09",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 17.483333,
+                    "lon": -62.966667
                 }, {
                     "continent": ["AF"],
                     "countryCode": "PT",
@@ -4078,7 +4578,9 @@
                     "prefixRegex": "^CT3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 32.75,
+                    "lon": -16.95
                 }, {
                     "continent": ["EU"],
                     "countryCode": "MT",
@@ -4094,7 +4596,9 @@
                     "prefixRegex": "^9H[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35.88,
+                    "lon": 14.42
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -4110,7 +4614,9 @@
                     "prefixRegex": "^PK4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1963-04-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0,
+                    "lon": 102
                 }, {
                     "continent": ["EU"],
                     "countryCode": "SJ",
@@ -4126,7 +4632,9 @@
                     "prefixRegex": "^JW[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 78,
+                    "lon": 16
                 }, {
                     "continent": ["EU"],
                     "countryCode": "MC",
@@ -4142,7 +4650,9 @@
                     "prefixRegex": "^3A[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 43.73,
+                    "lon": 7.4
                 }, {
                     "continent": ["NA"],
                     "countryCode": "ZZ",
@@ -4158,7 +4668,9 @@
                     "prefixRegex": "^KS4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1972-08-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 17.410556,
+                    "lon": -83.921944
                 }, {
                     "continent": ["AS"],
                     "countryCode": "TJ",
@@ -4174,7 +4686,9 @@
                     "prefixRegex": "^EY[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 38.82,
+                    "lon": 71.22
                 }, {
                     "continent": ["EU"],
                     "countryCode": "NL",
@@ -4190,7 +4704,9 @@
                     "prefixRegex": "^P[A-I][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 52.28,
+                    "lon": 5.47
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -4206,7 +4722,9 @@
                     "prefixRegex": "^CN2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1960-06-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35.776667,
+                    "lon": -5.803889
                 }, {
                     "continent": ["EU"],
                     "countryCode": "XI",
@@ -4222,7 +4740,9 @@
                     "prefixRegex": "^(G[IN][A-Z0-9/]*|2I[A-Z0-9/]*)",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 54.73,
+                    "lon": -6.68
                 }, {
                     "continent": ["EU"],
                     "countryCode": "NO",
@@ -4238,7 +4758,9 @@
                     "prefixRegex": "^L[A-N][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 61,
+                    "lon": 9
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ZZ",
@@ -4254,7 +4776,9 @@
                     "prefixRegex": "^(P2|VK9)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1975-09-15",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -5,
+                    "lon": 145
                 }, {
                     "continent": ["AS"],
                     "countryCode": "ZZ",
@@ -4270,7 +4794,9 @@
                     "prefixRegex": "^AC4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1974-05-30",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 29.653889,
+                    "lon": 91.1175
                 }, {
                     "continent": ["EU"],
                     "countryCode": "PL",
@@ -4286,7 +4812,9 @@
                     "prefixRegex": "^(HF|S[N-R]|3Z)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 52.28,
+                    "lon": 18.67
                 }, {
                     "continent": ["OC"],
                     "countryCode": "TK",
@@ -4302,7 +4830,9 @@
                     "prefixRegex": "^ZK3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -9.4,
+                    "lon": -171.2
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ZZ",
@@ -4318,7 +4848,9 @@
                     "prefixRegex": "^I1[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1957-03-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 45.68,
+                    "lon": 13.75
                 }, {
                     "continent": ["EU"],
                     "countryCode": "PT",
@@ -4334,7 +4866,9 @@
                     "prefixRegex": "^(CQ|CR|CS|CT)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 39.5,
+                    "lon": -8
                 }, {
                     "continent": ["SA"],
                     "countryCode": "BR",
@@ -4350,7 +4884,9 @@
                     "prefixRegex": "^P[P-Y]0T[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -20.5,
+                    "lon": -29.32
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SH",
@@ -4366,7 +4902,9 @@
                     "prefixRegex": "^ZD9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -37.13,
+                    "lon": -12.3
                 }, {
                     "continent": ["EU"],
                     "countryCode": "RO",
@@ -4382,7 +4920,9 @@
                     "prefixRegex": "^Y[O-R][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 45.78,
+                    "lon": 24.7
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TF",
@@ -4398,7 +4938,9 @@
                     "prefixRegex": "^(FT\\/T|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -15.88,
+                    "lon": 54.5
                 }, {
                     "continent": ["NA"],
                     "countryCode": "PM",
@@ -4414,7 +4956,9 @@
                     "prefixRegex": "^FP[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 46.77,
+                    "lon": -56.2
                 }, {
                     "continent": ["EU"],
                     "countryCode": "SM",
@@ -4430,7 +4974,9 @@
                     "prefixRegex": "^T7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 43.95,
+                    "lon": 12.45
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GB",
@@ -4446,7 +4992,9 @@
                     "prefixRegex": "^G[MS][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 56.82,
+                    "lon": -4.18
                 }, {
                     "continent": ["AS"],
                     "countryCode": "TM",
@@ -4462,7 +5010,9 @@
                     "prefixRegex": "^EZ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 38,
+                    "lon": 58
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ES",
@@ -4478,7 +5028,9 @@
                     "prefixRegex": "^(E[A-H]|AM|AN|AO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 40.37,
+                    "lon": -4.88
                 }, {
                     "continent": ["OC"],
                     "countryCode": "TV",
@@ -4494,7 +5046,9 @@
                     "prefixRegex": "^T2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1976-01-01"
+                    "validStart": "1976-01-01",
+                    "lat": -8.5,
+                    "lon": 179.2
                 }, {
                     "continent": ["AS"],
                     "countryCode": "GB",
@@ -4506,11 +5060,13 @@
                     "name": "Sovereign Base Areas of Akrotiri and Dhekelia",
                     "notes": "",
                     "outgoingQslService": true,
-                    "prefix": "ZC4",
-                    "prefixRegex": "^ZC4[A-Z0-9/]*$",
+                    "prefix": "ZC4,5B4",
+                    "prefixRegex": "^(ZC|5B)4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-16"
+                    "validStart": "1960-08-16",
+                    "lat": 34.676,
+                    "lon": 32.8375
                 }, {
                     "continent": ["EU"],
                     "countryCode": "SE",
@@ -4526,7 +5082,9 @@
                     "prefixRegex": "^(S[A-M]|[78]S)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 61.2,
+                    "lon": 14.57
                 }, {
                     "continent": ["NA"],
                     "countryCode": "VI",
@@ -4542,7 +5100,9 @@
                     "prefixRegex": "^KP2[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 17.73,
+                    "lon": -64.8
                 }, {
                     "continent": ["AF"],
                     "countryCode": "UG",
@@ -4558,7 +5118,9 @@
                     "prefixRegex": "^5X[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 1.92,
+                    "lon": 32.6
                 }, {
                     "continent": ["EU"],
                     "countryCode": "CH",
@@ -4574,7 +5136,9 @@
                     "prefixRegex": "^HB[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 46.87,
+                    "lon": 8.12
                 }, {
                     "continent": ["EU"],
                     "countryCode": "UA",
@@ -4590,7 +5154,9 @@
                     "prefixRegex": "^(U[R-Z]|E[M-O])[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 50,
+                    "lon": 30
                 }, {
                     "continent": ["NA"],
                     "countryCode": "UN",
@@ -4606,7 +5172,9 @@
                     "prefixRegex": "^4U[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 40.75,
+                    "lon": -73.97
                 }, {
                     "continent": ["NA"],
                     "countryCode": "US",
@@ -4622,7 +5190,9 @@
                     "prefixRegex": "^(K|W|N|A[A-K])[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 37.53,
+                    "lon": -91.67
                 }, {
                     "continent": ["AS"],
                     "countryCode": "UZ",
@@ -4638,7 +5208,9 @@
                     "prefixRegex": "^U[J-M][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 41.4,
+                    "lon": 63.97
                 }, {
                     "continent": ["AS"],
                     "countryCode": "VN",
@@ -4654,7 +5226,9 @@
                     "prefixRegex": "^(3W|XV)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 15.8,
+                    "lon": 107.9
                 }, {
                     "continent": ["EU"],
                     "countryCode": "GB",
@@ -4670,7 +5244,9 @@
                     "prefixRegex": "^2W|G[WC][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 52.28,
+                    "lon": -3.73
                 }, {
                     "continent": ["EU"],
                     "countryCode": "VA",
@@ -4686,7 +5262,9 @@
                     "prefixRegex": "^HV[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 41.9,
+                    "lon": 12.47
                 }, {
                     "continent": ["EU"],
                     "countryCode": "RS",
@@ -4702,7 +5280,9 @@
                     "prefixRegex": "^(Y[TU][A-Z0-9/]*|4N[A-Z0-9/]*)",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 44,
+                    "lon": 21
                 }, {
                     "continent": ["OC"],
                     "countryCode": "US",
@@ -4718,7 +5298,9 @@
                     "prefixRegex": "^KH9[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 19.28,
+                    "lon": 166.63
                 }, {
                     "continent": ["OC"],
                     "countryCode": "WF",
@@ -4734,7 +5316,9 @@
                     "prefixRegex": "^FW[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -13.3,
+                    "lon": -176.2
                 }, {
                     "continent": ["AS"],
                     "countryCode": "MY",
@@ -4750,7 +5334,9 @@
                     "prefixRegex": "^9M[24][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1963-09-16"
+                    "validStart": "1963-09-16",
+                    "lat": 3.95,
+                    "lon": 102.23
                 }, {
                     "continent": ["OC"],
                     "countryCode": "KI",
@@ -4759,14 +5345,16 @@
                     "entityCode": 301,
                     "flag": "🇰🇮",
                     "itu": [65],
-                    "name": "Gilbert Islands",
+                    "name": "Western Kiribati/Gilbert Islands",
                     "notes": "",
                     "outgoingQslService": false,
                     "prefix": "T30",
                     "prefixRegex": "^T30[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0,
+                    "lon": 174
                 }, {
                     "continent": ["AF"],
                     "countryCode": "EH",
@@ -4782,7 +5370,9 @@
                     "prefixRegex": "^S0[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 24.82,
+                    "lon": -13.85
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AU",
@@ -4798,7 +5388,9 @@
                     "prefixRegex": "^VK9W[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -16.22,
+                    "lon": 150.02
                 }, {
                     "continent": ["AS"],
                     "countryCode": "BH",
@@ -4814,7 +5406,9 @@
                     "prefixRegex": "^A9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 26.03,
+                    "lon": 50.53
                 }, {
                     "continent": ["AS"],
                     "countryCode": "BD",
@@ -4830,7 +5424,9 @@
                     "prefixRegex": "^S2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 24.12,
+                    "lon": 89.65
                 }, {
                     "continent": ["AS"],
                     "countryCode": "BT",
@@ -4846,7 +5442,9 @@
                     "prefixRegex": "^A5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 27.4,
+                    "lon": 90.18
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -4862,7 +5460,9 @@
                     "prefixRegex": "^(VQ1|5H1)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1974-05-31",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -6.165,
+                    "lon": 39.199
                 }, {
                     "continent": ["NA"],
                     "countryCode": "CR",
@@ -4878,7 +5478,9 @@
                     "prefixRegex": "^T[IE][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 10,
+                    "lon": -84
                 }, {
                     "continent": ["AS"],
                     "countryCode": "MM",
@@ -4894,7 +5496,9 @@
                     "prefixRegex": "^X[YZ][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 20,
+                    "lon": 96.37
                 }, {
                     "continent": ["AS"],
                     "countryCode": "KH",
@@ -4910,7 +5514,9 @@
                     "prefixRegex": "^XU[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.93,
+                    "lon": 105.13
                 }, {
                     "continent": ["AS"],
                     "countryCode": "LK",
@@ -4926,7 +5532,9 @@
                     "prefixRegex": "^4S[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 7.6,
+                    "lon": 80.7
                 }, {
                     "continent": ["AS"],
                     "countryCode": "CN",
@@ -4942,7 +5550,9 @@
                     "prefixRegex": "^B[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 36,
+                    "lon": 102
                 }, {
                     "continent": ["AS"],
                     "countryCode": "HK",
@@ -4958,7 +5568,9 @@
                     "prefixRegex": "^VR[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 22.28,
+                    "lon": 114.18
                 }, {
                     "continent": ["AS"],
                     "countryCode": "IN",
@@ -4974,7 +5586,9 @@
                     "prefixRegex": "^AT|AU|VU[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 22.5,
+                    "lon": 77.58
                 }, {
                     "continent": ["OC"],
                     "countryCode": "ID",
@@ -4990,7 +5604,9 @@
                     "prefixRegex": "^(Y[B-H]|8[A-I])[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1963-05-01"
+                    "validStart": "1963-05-01",
+                    "lat": -7.3,
+                    "lon": 109.88
                 }, {
                     "continent": ["AS"],
                     "countryCode": "IR",
@@ -5006,7 +5622,9 @@
                     "prefixRegex": "^E[PQ][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 32,
+                    "lon": 53
                 }, {
                     "continent": ["AS"],
                     "countryCode": "IQ",
@@ -5022,7 +5640,9 @@
                     "prefixRegex": "^YI[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 33.92,
+                    "lon": 42.78
                 }, {
                     "continent": ["AS"],
                     "countryCode": "IL",
@@ -5038,7 +5658,9 @@
                     "prefixRegex": "^4[XZ][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 31.32,
+                    "lon": 34.82
                 }, {
                     "continent": ["AS"],
                     "countryCode": "JP",
@@ -5054,7 +5676,9 @@
                     "prefixRegex": "^(J[A-S]|7[J-N]|8N)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 36.4,
+                    "lon": 138.38
                 }, {
                     "continent": ["AS"],
                     "countryCode": "JO",
@@ -5070,7 +5694,9 @@
                     "prefixRegex": "^JY[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 31.18,
+                    "lon": 36.42
                 }, {
                     "continent": ["AS"],
                     "countryCode": "KP",
@@ -5086,7 +5712,9 @@
                     "prefixRegex": "^P5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1995-05-14"
+                    "validStart": "1995-05-14",
+                    "lat": 39.78,
+                    "lon": 126.3
                 }, {
                     "continent": ["OC"],
                     "countryCode": "BN",
@@ -5102,7 +5730,9 @@
                     "prefixRegex": "^V8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 4.5,
+                    "lon": 114.6
                 }, {
                     "continent": ["AS"],
                     "countryCode": "KW",
@@ -5118,7 +5748,9 @@
                     "prefixRegex": "^9K[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 29.38,
+                    "lon": 47.38
                 }, {
                     "continent": ["AS"],
                     "countryCode": "LB",
@@ -5134,7 +5766,9 @@
                     "prefixRegex": "^OD[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 33.83,
+                    "lon": 35.83
                 }, {
                     "continent": ["AS"],
                     "countryCode": "MN",
@@ -5150,7 +5784,9 @@
                     "prefixRegex": "^J[T-V][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 46.77,
+                    "lon": 102.17
                 }, {
                     "continent": ["AS"],
                     "countryCode": "NP",
@@ -5166,7 +5802,9 @@
                     "prefixRegex": "^9N[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 27.7,
+                    "lon": 85.33
                 }, {
                     "continent": ["AS"],
                     "countryCode": "OM",
@@ -5182,7 +5820,9 @@
                     "prefixRegex": "^A4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 23.6,
+                    "lon": 58.55
                 }, {
                     "continent": ["AS"],
                     "countryCode": "PK",
@@ -5198,7 +5838,9 @@
                     "prefixRegex": "^AP[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 30,
+                    "lon": 70
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PH",
@@ -5214,7 +5856,9 @@
                     "prefixRegex": "^(D[U-Z]|4[D-I])[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13,
+                    "lon": 122
                 }, {
                     "continent": ["AS"],
                     "countryCode": "QA",
@@ -5230,7 +5874,9 @@
                     "prefixRegex": "^A7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 25.25,
+                    "lon": 51.13
                 }, {
                     "continent": ["AS"],
                     "countryCode": "SA",
@@ -5246,7 +5892,9 @@
                     "prefixRegex": "^HZ|7Z[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 24.2,
+                    "lon": 43.83
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SC",
@@ -5262,7 +5910,9 @@
                     "prefixRegex": "^S7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -4.67,
+                    "lon": 55.47
                 }, {
                     "continent": ["AS"],
                     "countryCode": "SG",
@@ -5278,7 +5928,9 @@
                     "prefixRegex": "^9V[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1965-08-08"
+                    "validStart": "1965-08-08",
+                    "lat": 1.37,
+                    "lon": 103.78
                 }, {
                     "continent": ["AF"],
                     "countryCode": "DJ",
@@ -5294,7 +5946,9 @@
                     "prefixRegex": "^J2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 11.75,
+                    "lon": 42.35
                 }, {
                     "continent": ["AS"],
                     "countryCode": "SY",
@@ -5310,7 +5964,9 @@
                     "prefixRegex": "^YK[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35.38,
+                    "lon": 38.2
                 }, {
                     "continent": ["AS"],
                     "countryCode": "TW",
@@ -5326,7 +5982,9 @@
                     "prefixRegex": "^B[U-X][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 23.72,
+                    "lon": 120.88
                 }, {
                     "continent": ["AS"],
                     "countryCode": "TH",
@@ -5342,7 +6000,9 @@
                     "prefixRegex": "^(HS|E2)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 12.6,
+                    "lon": 99.7
                 }, {
                     "continent": ["EU", "AS"],
                     "countryCode": "TR",
@@ -5358,7 +6018,9 @@
                     "prefixRegex": "^T[A-C]|YM[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 38.963745,
+                    "lon": 35.243322
                 }, {
                     "continent": ["AS"],
                     "countryCode": "AE",
@@ -5374,7 +6036,9 @@
                     "prefixRegex": "^A6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 24,
+                    "lon": 54
                 }, {
                     "continent": ["AF"],
                     "countryCode": "DZ",
@@ -5390,7 +6054,9 @@
                     "prefixRegex": "^7[T-Y][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 28,
+                    "lon": 2
                 }, {
                     "continent": ["AF"],
                     "countryCode": "AO",
@@ -5406,7 +6072,9 @@
                     "prefixRegex": "^D[23][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -12.5,
+                    "lon": 18.5
                 }, {
                     "continent": ["AF"],
                     "countryCode": "BW",
@@ -5422,7 +6090,9 @@
                     "prefixRegex": "^A2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -22,
+                    "lon": 24
                 }, {
                     "continent": ["AF"],
                     "countryCode": "BI",
@@ -5438,7 +6108,9 @@
                     "prefixRegex": "^9U[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1962-07-01"
+                    "validStart": "1962-07-01",
+                    "lat": -3.17,
+                    "lon": 29.78
                 }, {
                     "continent": ["AF"],
                     "countryCode": "CM",
@@ -5454,7 +6126,9 @@
                     "prefixRegex": "^TJ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 5.38,
+                    "lon": 11.87
                 }, {
                     "continent": ["AF"],
                     "countryCode": "CF",
@@ -5470,7 +6144,9 @@
                     "prefixRegex": "^TL[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-13"
+                    "validStart": "1960-08-13",
+                    "lat": 6.75,
+                    "lon": 20.33
                 }, {
                     "continent": ["AF"],
                     "countryCode": "CV",
@@ -5486,7 +6162,9 @@
                     "prefixRegex": "^D4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 16,
+                    "lon": -24
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TD",
@@ -5502,7 +6180,9 @@
                     "prefixRegex": "^TT[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-11"
+                    "validStart": "1960-08-11",
+                    "lat": 15.8,
+                    "lon": 18.17
                 }, {
                     "continent": ["AF"],
                     "countryCode": "KM",
@@ -5518,7 +6198,9 @@
                     "prefixRegex": "^D6[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": "1975-07-06"
+                    "validStart": "1975-07-06",
+                    "lat": -11.63,
+                    "lon": 43.3
                 }, {
                     "continent": ["AF"],
                     "countryCode": "CG",
@@ -5534,7 +6216,9 @@
                     "prefixRegex": "^TN[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-15"
+                    "validStart": "1960-08-15",
+                    "lat": -1.02,
+                    "lon": 15.37
                 }, {
                     "continent": ["AF"],
                     "countryCode": "CD",
@@ -5550,7 +6234,9 @@
                     "prefixRegex": "^9[Q-T][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -3.12,
+                    "lon": 23.03
                 }, {
                     "continent": ["AF"],
                     "countryCode": "BJ",
@@ -5566,7 +6252,9 @@
                     "prefixRegex": "^TY[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-01"
+                    "validStart": "1960-08-01",
+                    "lat": 9.87,
+                    "lon": 2.25
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GA",
@@ -5582,7 +6270,9 @@
                     "prefixRegex": "^TR[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-17"
+                    "validStart": "1960-08-17",
+                    "lat": -0.37,
+                    "lon": 11.73
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GM",
@@ -5598,7 +6288,9 @@
                     "prefixRegex": "^C5[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 13.4,
+                    "lon": -16.38
                 }, {
                     "continent": ["AF"],
                     "countryCode": "GH",
@@ -5614,7 +6306,9 @@
                     "prefixRegex": "^9G[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": "1957-03-05"
+                    "validStart": "1957-03-05",
+                    "lat": 7.7,
+                    "lon": -1.57
                 }, {
                     "continent": ["AF"],
                     "countryCode": "CI",
@@ -5630,7 +6324,9 @@
                     "prefixRegex": "^TU[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-07"
+                    "validStart": "1960-08-07",
+                    "lat": 7.539989,
+                    "lon": -5.54708
                 }, {
                     "continent": ["AF"],
                     "countryCode": "KE",
@@ -5646,7 +6342,9 @@
                     "prefixRegex": "^5[YZ][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 0.32,
+                    "lon": 38.15
                 }, {
                     "continent": ["AF"],
                     "countryCode": "LS",
@@ -5662,7 +6360,9 @@
                     "prefixRegex": "^7P[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -29.22,
+                    "lon": 27.88
                 }, {
                     "continent": ["AF"],
                     "countryCode": "LR",
@@ -5678,7 +6378,9 @@
                     "prefixRegex": "^EL[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 6.5,
+                    "lon": -9.5
                 }, {
                     "continent": ["AF"],
                     "countryCode": "LY",
@@ -5694,7 +6396,9 @@
                     "prefixRegex": "^5A[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 27.2,
+                    "lon": 16.6
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MG",
@@ -5710,7 +6414,9 @@
                     "prefixRegex": "^5R[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -19,
+                    "lon": 46.58
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MW",
@@ -5726,7 +6432,9 @@
                     "prefixRegex": "^7Q[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -14,
+                    "lon": 34
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ML",
@@ -5742,7 +6450,9 @@
                     "prefixRegex": "^TZ[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-06-20"
+                    "validStart": "1960-06-20",
+                    "lat": 18,
+                    "lon": -2.58
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MR",
@@ -5758,7 +6468,9 @@
                     "prefixRegex": "^5T[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-06-20"
+                    "validStart": "1960-06-20",
+                    "lat": 20.6,
+                    "lon": -10.5
                 }, {
                     "continent": ["AF"],
                     "countryCode": "MA",
@@ -5774,7 +6486,9 @@
                     "prefixRegex": "^(CN|5[C-E])[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 32,
+                    "lon": -5
                 }, {
                     "continent": ["AF"],
                     "countryCode": "NG",
@@ -5790,7 +6504,9 @@
                     "prefixRegex": "^5N[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 9.87,
+                    "lon": 7.55
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZW",
@@ -5806,7 +6522,9 @@
                     "prefixRegex": "^Z2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -18,
+                    "lon": 31
                 }, {
                     "continent": ["AF"],
                     "countryCode": "FR",
@@ -5822,7 +6540,9 @@
                     "prefixRegex": "^(FR|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -21.12,
+                    "lon": 55.48
                 }, {
                     "continent": ["AF"],
                     "countryCode": "RW",
@@ -5838,7 +6558,9 @@
                     "prefixRegex": "^9X[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1962-07-01"
+                    "validStart": "1962-07-01",
+                    "lat": -1.75,
+                    "lon": 29.82
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SN",
@@ -5854,7 +6576,9 @@
                     "prefixRegex": "^6[VW][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-06-20"
+                    "validStart": "1960-06-20",
+                    "lat": 15.2,
+                    "lon": -14.63
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SL",
@@ -5870,7 +6594,9 @@
                     "prefixRegex": "^9L[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 8.5,
+                    "lon": -13.25
                 }, {
                     "continent": ["OC"],
                     "countryCode": "FJ",
@@ -5886,7 +6612,9 @@
                     "prefixRegex": "^3D2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -12.48,
+                    "lon": 177.08
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZA",
@@ -5902,7 +6630,9 @@
                     "prefixRegex": "^Z[R-U][A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -29.07,
+                    "lon": 22.63
                 }, {
                     "continent": ["AF"],
                     "countryCode": "NA",
@@ -5918,7 +6648,9 @@
                     "prefixRegex": "^V5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -22,
+                    "lon": 17
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SD",
@@ -5934,7 +6666,9 @@
                     "prefixRegex": "^ST[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 14.47,
+                    "lon": 28.62
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SZ",
@@ -5950,7 +6684,9 @@
                     "prefixRegex": "^3DA[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -26.65,
+                    "lon": 31.48
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TZ",
@@ -5966,7 +6702,9 @@
                     "prefixRegex": "^5[HI][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -5.75,
+                    "lon": 33.92
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TN",
@@ -5982,7 +6720,9 @@
                     "prefixRegex": "^3V[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 35.4,
+                    "lon": 9.32
                 }, {
                     "continent": ["AF"],
                     "countryCode": "EG",
@@ -5998,7 +6738,9 @@
                     "prefixRegex": "^SU[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 26.28,
+                    "lon": 28.6
                 }, {
                     "continent": ["AF"],
                     "countryCode": "BF",
@@ -6014,7 +6756,9 @@
                     "prefixRegex": "^XT[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1960-08-16"
+                    "validStart": "1960-08-16",
+                    "lat": 12,
+                    "lon": -2
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZM",
@@ -6030,7 +6774,9 @@
                     "prefixRegex": "^9[IJ][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -14.22,
+                    "lon": 26.73
                 }, {
                     "continent": ["AF"],
                     "countryCode": "TG",
@@ -6046,7 +6792,9 @@
                     "prefixRegex": "^5V[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": 8.4,
+                    "lon": 1.28
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -6062,7 +6810,9 @@
                     "prefixRegex": "^ZS9[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1994-02-28",
-                    "validStart": "1977-09-01"
+                    "validStart": "1977-09-01",
+                    "lat": -22.956111,
+                    "lon": 14.508056
                 }, {
                     "continent": ["OC"],
                     "countryCode": "FJ",
@@ -6078,7 +6828,9 @@
                     "prefixRegex": "^3D2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -22,
+                    "lon": 175
                 }, {
                     "continent": ["OC"],
                     "countryCode": "KI",
@@ -6094,7 +6846,9 @@
                     "prefixRegex": "^T33[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -0.88,
+                    "lon": 169.53
                 }, {
                     "continent": ["AS"],
                     "countryCode": "YE",
@@ -6110,7 +6864,9 @@
                     "prefixRegex": "^7O[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1990-05-22"
+                    "validStart": "1990-05-22",
+                    "lat": 15.65,
+                    "lon": 48.12
                 }, {
                     "continent": ["AF"],
                     "countryCode": "ZZ",
@@ -6126,7 +6882,9 @@
                     "prefixRegex": "^ZS[01][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "1994-02-28",
-                    "validStart": ""
+                    "validStart": "",
+                    "lat": -26.616667,
+                    "lon": 15.154167
                 }, {
                     "continent": ["EU"],
                     "countryCode": "HR",
@@ -6142,7 +6900,9 @@
                     "prefixRegex": "^9A[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1991-06-26"
+                    "validStart": "1991-06-26",
+                    "lat": 45.18,
+                    "lon": 15.3
                 }, {
                     "continent": ["EU"],
                     "countryCode": "SI",
@@ -6158,7 +6918,9 @@
                     "prefixRegex": "^S5[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1991-06-26"
+                    "validStart": "1991-06-26",
+                    "lat": 46,
+                    "lon": 14
                 }, {
                     "continent": ["EU"],
                     "countryCode": "BA",
@@ -6174,7 +6936,9 @@
                     "prefixRegex": "^(E7[A-Z0-9/]*|T9[A-Z0-9/]*)",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": "1991-10-15"
+                    "validStart": "1991-10-15",
+                    "lat": 43.915886,
+                    "lon": 17.679076
                 }, {
                     "continent": ["EU"],
                     "countryCode": "MK",
@@ -6190,7 +6954,9 @@
                     "prefixRegex": "^Z3[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1991-09-08"
+                    "validStart": "1991-09-08",
+                    "lat": 41.6,
+                    "lon": 21.65
                 }, {
                     "continent": ["EU"],
                     "countryCode": "CZ",
@@ -6206,7 +6972,9 @@
                     "prefixRegex": "^O[KL][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1993-01-01"
+                    "validStart": "1993-01-01",
+                    "lat": 50,
+                    "lon": 16
                 }, {
                     "continent": ["EU"],
                     "countryCode": "SK",
@@ -6222,7 +6990,9 @@
                     "prefixRegex": "^OM[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1993-01-01"
+                    "validStart": "1993-01-01",
+                    "lat": 49,
+                    "lon": 20
                 }, {
                     "continent": ["AS"],
                     "countryCode": "TW",
@@ -6238,7 +7008,9 @@
                     "prefixRegex": "^BV9P[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1994-01-01"
+                    "validStart": "1994-01-01",
+                    "lat": 20.7,
+                    "lon": 116.7
                 }, {
                     "continent": ["AS"],
                     "countryCode": "CN",
@@ -6254,7 +7026,9 @@
                     "prefixRegex": "^BS7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1995-01-01"
+                    "validStart": "1995-01-01",
+                    "lat": 15.08,
+                    "lon": 117.72
                 }, {
                     "continent": ["OC"],
                     "countryCode": "SB",
@@ -6270,7 +7044,9 @@
                     "prefixRegex": "^H40[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1998-04-01"
+                    "validStart": "1998-04-01",
+                    "lat": -10.72,
+                    "lon": 165.8
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PF",
@@ -6286,7 +7062,9 @@
                     "prefixRegex": "^(FO|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1998-04-01"
+                    "validStart": "1998-04-01",
+                    "lat": -23.37,
+                    "lon": -149.48
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PF",
@@ -6302,7 +7080,9 @@
                     "prefixRegex": "^(FO|TX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1998-04-01"
+                    "validStart": "1998-04-01",
+                    "lat": -8.92,
+                    "lon": -140.07
                 }, {
                     "continent": ["AS"],
                     "countryCode": "PS",
@@ -6318,7 +7098,9 @@
                     "prefixRegex": "^E4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "1999-02-01"
+                    "validStart": "1999-02-01",
+                    "lat": 31.28,
+                    "lon": 34.27
                 }, {
                     "continent": ["OC"],
                     "countryCode": "TL",
@@ -6334,7 +7116,9 @@
                     "prefixRegex": "^4W[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2000-03-01"
+                    "validStart": "2000-03-01",
+                    "lat": -8.874217,
+                    "lon": 125.727539
                 }, {
                     "continent": ["OC"],
                     "countryCode": "NC",
@@ -6350,7 +7134,9 @@
                     "prefixRegex": "^(FK|TX)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2000-03-23"
+                    "validStart": "2000-03-23",
+                    "lat": -19.87,
+                    "lon": 158.32
                 }, {
                     "continent": ["OC"],
                     "countryCode": "PN",
@@ -6366,7 +7152,9 @@
                     "prefixRegex": "^VP6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2001-11-16"
+                    "validStart": "2001-11-16",
+                    "lat": -24.7,
+                    "lon": -124.8
                 }, {
                     "continent": ["EU"],
                     "countryCode": "ME",
@@ -6382,7 +7170,9 @@
                     "prefixRegex": "^4O[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2006-06-28"
+                    "validStart": "2006-06-28",
+                    "lat": 42.5,
+                    "lon": 19.28
                 }, {
                     "continent": ["OC"],
                     "countryCode": "AS",
@@ -6398,7 +7188,9 @@
                     "prefixRegex": "^KH8[A-Z0-9/]*$",
                     "thirdPartyTraffic": true,
                     "validEnd": "",
-                    "validStart": "2006-07-22"
+                    "validStart": "2006-07-22",
+                    "lat": -11.05,
+                    "lon": -171.25
                 }, {
                     "continent": ["NA"],
                     "countryCode": "FR",
@@ -6414,7 +7206,9 @@
                     "prefixRegex": "^(FJ|TO)[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2007-12-14"
+                    "validStart": "2007-12-14",
+                    "lat": 17.9,
+                    "lon": -62.83
                 }, {
                     "continent": ["SA"],
                     "countryCode": "CW",
@@ -6430,7 +7224,9 @@
                     "prefixRegex": "^PJ2[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2010-10-10"
+                    "validStart": "2010-10-10",
+                    "lat": 12.17,
+                    "lon": -69
                 }, {
                     "continent": ["NA"],
                     "countryCode": "SX",
@@ -6446,7 +7242,9 @@
                     "prefixRegex": "^PJ7[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2010-10-10"
+                    "validStart": "2010-10-10",
+                    "lat": 18.07,
+                    "lon": -63.07
                 }, {
                     "continent": ["NA"],
                     "countryCode": "BQ",
@@ -6462,7 +7260,9 @@
                     "prefixRegex": "^PJ[56][A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2010-10-10"
+                    "validStart": "2010-10-10",
+                    "lat": 17.57,
+                    "lon": -63.1
                 }, {
                     "continent": ["SA"],
                     "countryCode": "BQ",
@@ -6478,7 +7278,9 @@
                     "prefixRegex": "^PJ4[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2010-10-10"
+                    "validStart": "2010-10-10",
+                    "lat": 12.2,
+                    "lon": -68.25
                 }, {
                     "continent": ["AF"],
                     "countryCode": "SS",
@@ -6494,7 +7296,9 @@
                     "prefixRegex": "^Z8[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2011-07-14"
+                    "validStart": "2011-07-14",
+                    "lat": 4.85,
+                    "lon": 31.6
                 }, {
                     "continent": ["EU"],
                     "countryCode": "XK",
@@ -6510,7 +7314,9 @@
                     "prefixRegex": "^Z6[A-Z0-9/]*$",
                     "thirdPartyTraffic": false,
                     "validEnd": "",
-                    "validStart": "2018-01-21"
+                    "validStart": "2018-01-21",
+                    "lat": 42.67,
+                    "lon": 21.17
                 }]
             };
 
@@ -6538,6 +7344,26 @@
                 }
                 return result;
             };
+        }
+
+        function band2color(band) {
+            switch (band) {
+                case '160m': return '#156184';
+                case '80m': return '#903727';
+                case '60m': return '#152F47';
+                case '40m': return '#18A018';
+                case '30m': return '#FAFA00';
+                case '20m': return '#DC2828';
+                case '17m': return '#751F6B';
+                case '15m': return '#1515CB';
+                case '12m': return '#47DFF0';
+                case '10m': return '#E87421';
+                case '6m': return '#FF61EA';
+                case '4m': return '#666062';
+                case '2m': return '#5EFFA0';
+                case '70cm': return '#5ECFFF';
+                default: return '#A07CFF';
+            }
         }
 
         function selectFile() {
@@ -6583,6 +7409,7 @@
             let adif = new ADIFParser(rawAdif);
             let decoder = new DXCCDecoder();
             adif.getQSOs().forEach((record) => {
+                // console.log(record);
                 let date = record.qso_date.value.substring(0, 4) + '-'
                     + record.qso_date.value.substring(4, 6) + '-'
                     + record.qso_date.value.substring(6, 8);
@@ -6597,7 +7424,16 @@
                     [lat, lon] = grid2latlon(record.gridsquare.value);
                 }
 
+                // fill in missing coordinates from dxcc list
+                if (!lat && !lon && (country.lat || country.lon)) {
+                    console.log(`Using ${country.name} coordinates for ${record.call.value}, ${country.lat}, ${country.lon}`);
+                    lat = country.lat;
+                    lon = country.lon;
+                }
+
                 QSOs.push({
+                    myCall: record.station_callsign.value,
+                    myGrid: (record.my_gridsquare || '') ? record.my_gridsquare.value : '',
                     call: record.call.value,
                     band: record.band.value,
                     distance: (record.distance || '') ? record.distance.value : -1,
@@ -6616,22 +7452,28 @@
         function mapQSOs(QSOs) {
             markers.clearLayers();
 
-            let points = [];
-            // home qth point
-            let home = grid2latlon(document.getElementById('locator').value);
-            if (home != [0,0]) {
-                markers.addLayer(L.marker(home));
-                points.push(home);
-            }
+            // TODO think about grouping of markers by the same coordinates
 
+            let points = [];
+            let used = [];
             QSOs.forEach((qso) => {
+                let myGrid = qso.myGrid || document.getElementById('locator').value;
+                let home = grid2latlon(myGrid);
+                if (myGrid && used.indexOf(myGrid) === -1) {
+                    used.push(myGrid);
+                    if (home !== [0,0]) {
+                        markers.addLayer(L.marker(home));
+                        points.push(home);
+                    }
+                }
+
                 if (qso.lat && qso.lon) {
                     markers.addLayer(L.marker([qso.lat, qso.lon]));
                     points.push([qso.lat, qso.lon]);
 
-                    // line from home qth to remote qth
-                    if (home != [0,0]) {
-                        markers.addLayer(L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1}));
+                    // line from my qth to remote qth
+                    if (home !== [0,0]) {
+                        markers.addLayer(L.polyline([home, [qso.lat, qso.lon]], {color: band2color(qso.band), weight: 1}));
                     }
                 }
             });
@@ -6776,7 +7618,6 @@
 
             markers = L.layerGroup();
             markers.addTo(map);
-
         }
     </script>
     <style>
@@ -6799,13 +7640,13 @@
             <div class="col-2 p-2">
                 <h3 class="text-center">OM6RT ADIF Mapper</h3>
                 <div class="row mb-2">
-                    <label for="callsign" class="col-sm-4 col-form-label col-form-label-sm">My Callsign</label>
+                    <label for="callsign" class="col-sm-5 col-form-label col-form-label-sm">My Default Callsign</label>
                     <div class="col">
                         <input type="text" class="form-control form-control-sm" id="callsign" value="OM6RT/P">
                     </div>
                 </div>
                 <div class="row mb-2">
-                    <label for="callsign" class="col-sm-4 col-form-label col-form-label-sm">My Locator</label>
+                    <label for="callsign" class="col-sm-5 col-form-label col-form-label-sm">My Default Locator</label>
                     <div class="col">
                         <input type="text" class="form-control form-control-sm" id="locator" value="JN99JF">
                     </div>
