@@ -9,7 +9,7 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.geodesic"></script>
     <script src="html2canvas.min.js"></script>
 
     <!-- main -->
@@ -7409,7 +7409,6 @@
             let adif = new ADIFParser(rawAdif);
             let decoder = new DXCCDecoder();
             adif.getQSOs().forEach((record) => {
-                // console.log(record);
                 let date = record.qso_date.value.substring(0, 4) + '-'
                     + record.qso_date.value.substring(4, 6) + '-'
                     + record.qso_date.value.substring(6, 8);
@@ -7470,13 +7469,15 @@
                     }
                 }
 
+            QSOs.forEach((qso) => {
                 if (qso.lat && qso.lon) {
                     markers.addLayer(L.marker([qso.lat, qso.lon]));
                     points.push([qso.lat, qso.lon]);
 
-                    // line from my qth to remote qth
-                    if (home !== [0,0]) {
-                        markers.addLayer(L.polyline([home, [qso.lat, qso.lon]], {color: band2color(qso.band), weight: 1}));
+                    // line from home qth to remote qth
+                    if (home != [0,0]) {
+                        //markers.addLayer(L.polyline([home, [qso.lat, qso.lon]], {color: 'red', weight: 1}));
+                        markers.addLayer(new L.Geodesic([home, [qso.lat, qso.lon]], {color: band2color(qso.band), weight: 2, steps: 6}));
                     }
                 }
             });
@@ -7621,6 +7622,7 @@
 
             markers = L.layerGroup();
             markers.addTo(map);
+
         }
     </script>
     <style>
